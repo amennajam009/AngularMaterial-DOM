@@ -5,9 +5,10 @@ import { AngularMaterialRoutingModule } from './angular-material-routing.module'
 import { AngularMaterialComponent } from './angular-material.component';
 
 
+
 @NgModule({
   declarations: [
-    AngularMaterialComponent
+    AngularMaterialComponent,
   ],
   imports: [
     CommonModule,
