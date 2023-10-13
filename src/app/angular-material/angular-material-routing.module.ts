@@ -6,11 +6,12 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: AngularMaterialComponent,
   children:[
-    {path:'' , component:HomeComponent},
+    {path:'', component:HomeComponent},
+    
 
   
   
-  ] }
+  ]}
   
 ];
 
