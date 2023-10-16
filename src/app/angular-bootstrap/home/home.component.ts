@@ -7,6 +7,7 @@ import { BootstrapServiceService } from '../shared/bootstrap-service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  variabledata:any = [] = [];
   constructor(private bootstrapService:BootstrapServiceService) { }
 
   ngOnInit(): void {
@@ -15,7 +16,8 @@ export class HomeComponent {
 
   GetDropdownVariables(){
     this.bootstrapService.GetDropDownVariables().subscribe((res:any)=>{
-      res;
+      this.variabledata  = res
+      console.log("Mydata" , this.variabledata)
     })
   }
 }
