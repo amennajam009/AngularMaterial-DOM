@@ -33,7 +33,7 @@
                               Dropdown Variable1
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                              <li *ngFor="let data of variabledata">
+                              <li *ngFor="let data of variabledata?.variable1">
                                 <a class="dropdown-item active" href="#">{{data.variable}}</a>
                               </li>
                             </ul>
