@@ -1,6 +1,16 @@
 
-<h1 class="text-center mt-5 mb-5">Angular -Bootstrap5</h1>
-
+<!-- <h1 class="text-center mt-5 mb-5">Angular -Bootstrap5</h1> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
 <div class="container-fluid">
     <div class="row">
         <!-- USER FORM START -->
@@ -22,8 +32,8 @@
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                               Dropdown Variable1
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                              <li *ngFor="let item of variabledata.data.data.variable1" >
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2" *ngIf="variabledata">
+                              <li *ngFor="let item of variabledata">
                                 <a class="dropdown-item active" href="#">{{item.variable}}</a>
                               </li>
                               <!-- <li><a class="dropdown-item" href="#">Another action</a></li>

@@ -16,7 +16,7 @@ export class HomeComponent {
 
   GetDropdownVariables(){
     this.bootstrapService.GetDropDownVariables().subscribe((res:any)=>{
-      this.variabledata  = res
+      this.variabledata  = res?.data.data.variable1
       console.log("Mydata" , this.variabledata)
     })
   }
