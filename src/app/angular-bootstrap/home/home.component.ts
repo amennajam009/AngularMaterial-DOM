@@ -36,7 +36,9 @@ export class HomeComponent {
       variable9: new FormControl ('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
     })
   }
- 
+  onDropdownItemClick(selectedValue: string) {
+    this.dropDownVariables.get('variable2').setValue(selectedValue);
+  }
 
   
 SubmitOrder(){

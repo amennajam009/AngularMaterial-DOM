@@ -27,14 +27,19 @@
                     <h6 class="mb-0 mt-4 text-secondary">USER INFORMATION</h6>
                     <hr>
                     <div class="row g-3">
+                      <label></label>
+                      <select formControlName="variable1"  class="form-control" >
+                        <option *ngFor="let data of variabledata?.variable1">{{data.variable}}</option>
+                    </select>
                       <div class="col-6">
+
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                               Dropdown Variable1
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                               <li *ngFor="let data of variabledata?.variable1">
-                                <a class="dropdown-item active" href="#" formControlName="variable1">{{data.variable}}</a>
+                                <a class="dropdown-item active" href="#" >{{data.variable}}</a>
                               </li>
                             </ul>
                           </div>
