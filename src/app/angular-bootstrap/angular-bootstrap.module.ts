@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AngularBootstrapRoutingModule } from './angular-bootstrap-routing.module';
 import { AngularBootstrapComponent } from './angular-bootstrap.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    AngularBootstrapRoutingModule
+    AngularBootstrapRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class AngularBootstrapModule { }
