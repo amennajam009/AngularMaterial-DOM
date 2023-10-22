@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BootstrapServiceService } from '../shared/bootstrap-service.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
@@ -9,8 +9,8 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class HomeComponent {
   variabledata:any = [] = [];
-   dropDownVariables : FormBuilder | any;
-
+  dropDownVariables : FormBuilder | any;
+  @Output() sendObjectToTestingComp = new EventEmitter<any>();
 
   constructor(private bootstrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder,
@@ -49,6 +49,7 @@ SubmitOrder(){
   GetDropdownVariables(){
     this.bootstrapService.GetDropDownVariables().subscribe((res:any)=>{
       this.variabledata  = res?.data.data;
+      // this.sendObjectToTestingComp.emit(this.variabledata)
     })
   }
 }
