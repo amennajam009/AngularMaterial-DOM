@@ -17,7 +17,6 @@ export class TestingComComponent {
 
   myvariablesfunction() {
    this.variables =  this.AngularBootstrapCommunationService.getvariables()
-      // this.variables = data?.data;
       console.log('Myvar###', this.variables);
     ;
   }
