@@ -5,14 +5,14 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class AngularBootstrapCommunationService {
-  private variabledata = new Subject<any>();
- 
+  private variabledata = '';
 
   setvariables (data: any) {
-    this.variabledata.next(data);
+    return this.variabledata = data;
   }
 
-  getvariables(): Observable<any> {
-    return this.variabledata.asObservable();
+
+  getvariables(){
+    return this.variabledata;
   }
 }

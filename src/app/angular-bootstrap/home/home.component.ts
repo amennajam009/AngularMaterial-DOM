@@ -54,7 +54,7 @@ SubmitOrder(){
     this.bootstrapService.GetDropDownVariables().subscribe((res:any)=>{
       this.variabledata  = res?.data.data;
       this.AngularBootstrapCommunationService.setvariables(
-        res?.data.data
+        this.variabledata
       );
     })
   }

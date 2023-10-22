@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TestingComComponent {
   @Input() MyVariables:any = [] = []
-  variables :any = [] = []
+  variables :any = []
   constructor(private AngularBootstrapCommunationService:AngularBootstrapCommunationService) { }
 
   ngOnInit(): void {
@@ -16,9 +16,9 @@ export class TestingComComponent {
   }
 
   myvariablesfunction() {
-    this.AngularBootstrapCommunationService.getvariables().subscribe(data => {
-      this.variables = data;
+   this.variables =  this.AngularBootstrapCommunationService.getvariables()
+      // this.variables = data?.data;
       console.log('Myvar###', this.variables);
-    });
+    ;
   }
 }
