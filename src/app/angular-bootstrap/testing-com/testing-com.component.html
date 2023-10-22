@@ -2,34 +2,36 @@
 <app-layout>
     <h2 class="mt-5">Testing Component</h2>
 
-
+    <form [formGroup]="testingCompForm" (ngSubmit)="SubmitOrder()">
     <h2>Variable 1</h2>
-    <select   class="form-control" >
+    <select  formControlName="variable1"  class="form-control" >
         <option *ngFor="let data of variables?.variable1">{{data.variable}}</option>
     </select>
 
     <h2>Variable 2</h2>
-    <select   class="form-control" >
+    <select  formControlName="variable2"  class="form-control" >
         <option *ngFor="let data of variables?.variable2">{{data.variable}}</option>
     </select>
 
     <h2>Variable 3</h2>
-    <select   class="form-control" >
+    <select formControlName="variable3"  class="form-control" >
         <option *ngFor="let data of variables?.variable3">{{data.variable}}</option>
     </select>
 
     <h2>Variable 4</h2>
-    <select   class="form-control" >
+    <select formControlName="variable4"  class="form-control" >
         <option *ngFor="let data of variables?.variable4">{{data.variable}}</option>
     </select>
 
     <h2>Variable 5</h2>
-    <select   class="form-control" >
+    <select formControlName="variable5"  class="form-control" >
         <option *ngFor="let data of variables?.variable5">{{data.variable}}</option>
     </select>
 
     <h2>Variable 6</h2>
-    <select   class="form-control" >
+    <select formControlName="variable6"  class="form-control" >
         <option *ngFor="let data of variables?.variable6">{{data.variable}}</option>
     </select>
+    <button class="btn btn-success" type="submit">Save</button>
+</form>
 </app-layout>

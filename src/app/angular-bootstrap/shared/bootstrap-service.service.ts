@@ -18,4 +18,9 @@ export class BootstrapServiceService {
   saveVariables(payLoad:any){
     return this.HttpClient.post("http://localhost:8080/saveVariableData/SaveSelectedVariable" , payLoad)
   }
+
+  //saving the Variable
+  saveTestingVariable(payLoad:any){
+   return this.HttpClient.post("http://localhost:8080/saveVariableData/SaveTestingComponent",payLoad)
+  }
 }
