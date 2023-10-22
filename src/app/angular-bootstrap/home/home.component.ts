@@ -1,6 +1,9 @@
+
 import { Component, EventEmitter, Output } from '@angular/core';
 import { BootstrapServiceService } from '../shared/bootstrap-service.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { AngularBootstrapComponent } from '../angular-bootstrap.component';
+import { AngularBootstrapCommunationService } from '../shared/angular-bootstrap-communation.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +17,8 @@ export class HomeComponent {
 
   constructor(private bootstrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder,
-              private bootStrapService:BootstrapServiceService) { 
+              private bootStrapService:BootstrapServiceService,
+              private AngularBootstrapCommunationService:AngularBootstrapCommunationService) { 
                 this.dropDownVariableModal()
               }
 
@@ -49,7 +53,9 @@ SubmitOrder(){
   GetDropdownVariables(){
     this.bootstrapService.GetDropDownVariables().subscribe((res:any)=>{
       this.variabledata  = res?.data.data;
-      // this.sendObjectToTestingComp.emit(this.variabledata)
+      this.AngularBootstrapCommunationService.setvariables(
+        res?.data.data
+      );
     })
   }
 }

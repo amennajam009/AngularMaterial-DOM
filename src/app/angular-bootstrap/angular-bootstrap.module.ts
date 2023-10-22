@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestingComComponent } from './testing-com/testing-com.component';
 import { LayoutComponent } from './layout/layout.component';
+
 @NgModule({
   declarations: [
     AngularBootstrapComponent,

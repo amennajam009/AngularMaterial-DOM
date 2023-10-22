@@ -1,3 +1,4 @@
+import { AngularBootstrapCommunationService } from './../shared/angular-bootstrap-communation.service';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, Input } from '@angular/core';
 })
 export class TestingComComponent {
   @Input() MyVariables:any = [] = []
-  constructor() { }
+  variables :any = [] = []
+  constructor(private AngularBootstrapCommunationService:AngularBootstrapCommunationService) { }
 
   ngOnInit(): void {
-
+    this.myvariablesfunction()
   }
+
+  myvariablesfunction(){
+   this.variables = this.AngularBootstrapCommunationService.getvariables()
+   console.log('Myvar###',this.variables)
+  }
+
 }
