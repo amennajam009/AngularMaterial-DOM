@@ -13,6 +13,7 @@ import { AngularBootstrapCommunationService } from '../shared/angular-bootstrap-
 export class HomeComponent {
   variabledata:any = [] = [];
   dropDownVariables : FormBuilder | any;
+  imageTesting : FormBuilder | any;
   @Output() sendObjectToTestingComp = new EventEmitter<any>();
 
   constructor(private bootstrapService:BootstrapServiceService,
@@ -39,6 +40,12 @@ export class HomeComponent {
       variable8: new FormControl ('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
       variable9: new FormControl ('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
     })
+  }
+
+  imageTestingForm(){
+  this.imageTesting = this.FormBuilder.group({
+    name:new FormControl ('',[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
+  })
   }
  
   

@@ -23,4 +23,9 @@ export class BootstrapServiceService {
   saveTestingVariable(payLoad:any){
    return this.HttpClient.post("http://localhost:8080/saveVariableData/SaveTestingComponent",payLoad)
   }
+
+  //testingimageApi
+  testingImageApi(payLoad:any){
+    return this.HttpClient.post("http://localhost:8080/ImageTestingData/MytestingApi",payLoad)
+  }
 }
