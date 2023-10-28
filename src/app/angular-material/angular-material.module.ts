@@ -6,7 +6,7 @@ import { AngularMaterialComponent } from './angular-material.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
     AngularMaterialRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    MatTabsModule
   ]
 })
 export class AngularMaterialModule { }
