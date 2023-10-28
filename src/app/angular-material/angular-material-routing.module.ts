@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: AngularMaterialComponent,
   children:[
     {path:'', component:HomeComponent},
+    {path:'home', component:HomeComponent}
     
 
   

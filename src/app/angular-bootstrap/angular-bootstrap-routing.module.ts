@@ -7,6 +7,7 @@ import { TestingComComponent } from './testing-com/testing-com.component';
 const routes: Routes = [{ path: '', component: AngularBootstrapComponent,
 children:[
   {path:'', component:HomeComponent},
+  {path:'home', component:HomeComponent},
   {path:'testing-com' , component:TestingComComponent}
   
 
