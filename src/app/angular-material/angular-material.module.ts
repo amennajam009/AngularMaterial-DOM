@@ -15,6 +15,7 @@ import { Form5Component } from './mat-tab-forms/form5/form5.component';
 import {MatSelectModule} from '@angular/material/select';
 import { LayoutComponent } from './layout/layout.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
+import { MainPageComponent } from './main-page/main-page.component';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -26,6 +27,7 @@ import {NgxSpinnerModule} from 'ngx-spinner';
     Form4Component,
     Form5Component,
     LayoutComponent,
+    MainPageComponent,
   ],
   imports: [
     CommonModule,
