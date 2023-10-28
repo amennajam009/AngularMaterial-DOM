@@ -13,6 +13,7 @@ import { Form3Component } from './mat-tab-forms/form3/form3.component';
 import { Form4Component } from './mat-tab-forms/form4/form4.component';
 import { Form5Component } from './mat-tab-forms/form5/form5.component';
 import {MatSelectModule} from '@angular/material/select';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
     Form3Component,
     Form4Component,
     Form5Component,
+    LayoutComponent,
   ],
   imports: [
     CommonModule,

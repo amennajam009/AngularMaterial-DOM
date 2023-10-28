@@ -1,5 +1,7 @@
   
-/* h1{
-    color: blue;
-    background-color: pink;
-  }  */
+.h1Heading{
+    font-size: 32px;
+    color: rgb(3, 8, 57);
+    font-weight: bold;
+    margin-left: 60px;
+}
