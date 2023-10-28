@@ -12,7 +12,7 @@ import { Form2Component } from './mat-tab-forms/form2/form2.component';
 import { Form3Component } from './mat-tab-forms/form3/form3.component';
 import { Form4Component } from './mat-tab-forms/form4/form4.component';
 import { Form5Component } from './mat-tab-forms/form5/form5.component';
-
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { Form5Component } from './mat-tab-forms/form5/form5.component';
     AngularMaterialRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule
   ]
 })
 export class AngularMaterialModule { }
