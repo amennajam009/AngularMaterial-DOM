@@ -14,7 +14,7 @@ import { Form4Component } from './mat-tab-forms/form4/form4.component';
 import { Form5Component } from './mat-tab-forms/form5/form5.component';
 import {MatSelectModule} from '@angular/material/select';
 import { LayoutComponent } from './layout/layout.component';
-
+import {NgxSpinnerModule} from 'ngx-spinner';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -33,7 +33,8 @@ import { LayoutComponent } from './layout/layout.component';
     ReactiveFormsModule,
     FormsModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxSpinnerModule
   ]
 })
 export class AngularMaterialModule { }

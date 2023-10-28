@@ -1,6 +1,9 @@
 <app-layout>
 <ng-container>
-<mat-tab-group>
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true" >
+    <p style="color: white">Loading...</p>
+  </ngx-spinner>
+<mat-tab-group (selectedTabChange)="onTabChange($event)">
   <mat-tab label="From-1"> 
     <app-form1></app-form1>
   </mat-tab>
