@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form1',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./form1.component.css']
 })
 export class Form1Component {
+  @Input() formwholedata: any;
 
+  constructor() {}
+
+  ngOnInit(): void {
+  this.formwholedata.subscribe((res:any)=>{
+    res
+    console.log('%%%%%%%%' , res)
+  })
+  }
 }

@@ -2,7 +2,9 @@
 <ng-container>
 <mat-tab-group>
   <mat-tab label="From-1"> 
-    <app-form1></app-form1>
+    <app-form1
+    [formwholedata]="FormDataToEmit"
+    ></app-form1>
   </mat-tab>
   <mat-tab label="From-2">
      <app-form2></app-form2>
