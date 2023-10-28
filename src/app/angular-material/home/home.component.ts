@@ -8,7 +8,7 @@ import { MaterialServiceService } from '../shared/material-service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  showSpinner: boolean = false;
+  FormsData : any = [] 
 
   constructor(private angularMaterialService:MaterialServiceService) {}
 
@@ -18,8 +18,9 @@ export class HomeComponent {
    }
  
     getMaterialVariable(){
-      this.angularMaterialService.angularMaterialDropDownVaribale().subscribe((res:any)=>{
-        res
+      this.angularMaterialService.angularMaterialDropDownVaribale().subscribe((response:any)=>{
+        this.FormsData = response?.result?.data
+        console.log('&&&&&&&' , this.FormsData)
       })
     }
 
