@@ -13,4 +13,7 @@ export class AngularMaterialCommunicationService {
   return this.dataToSend = data
   }
 
+  getSavedVariablesData(){
+    return this.dataToSend
+  }
 }
