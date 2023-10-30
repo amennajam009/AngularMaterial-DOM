@@ -29,7 +29,6 @@ export class HomeComponent {
         // This is how we can save our data by using services and we can communicate with other components by using it
         this.angularMaterialCommunication.saveVariablesData(this.FormsData)
            
-
       })
     }
 
