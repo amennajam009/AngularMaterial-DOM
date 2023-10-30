@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { LayoutComponent } from './layout/layout.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import { MainPageComponent } from './main-page/main-page.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -36,7 +37,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     FormsModule,
     MatTabsModule,
     MatSelectModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgSelectModule,
   ]
 })
 export class AngularMaterialModule { }
