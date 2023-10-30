@@ -7,12 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class Form1Component {
   @Input() variablesOfMatTabs: any;
-   variablesToShowInSelector : any = [] = []
+   variablesToShowInSelector : any = {}
   constructor() {}
 
   ngOnInit(): void {
   this.variablesOfMatTabs.subscribe((res:any)=>{
-  this.variablesToShowInSelector = Object.values(res);
+  this.variablesToShowInSelector = res
   console.log('^^^^^^^^^^' , this.variablesToShowInSelector)
   })
   }
