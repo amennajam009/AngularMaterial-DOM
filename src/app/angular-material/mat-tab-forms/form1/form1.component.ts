@@ -6,14 +6,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./form1.component.css']
 })
 export class Form1Component {
-  @Input() formwholedata: any;
-
+  @Input() variablesOfMatTabs: any;
+   variablesToShowInSelector : any = []
   constructor() {}
 
   ngOnInit(): void {
-  this.formwholedata.subscribe((res:any)=>{
-    res
-    console.log('%%%%%%%%' , res)
+  this.variablesOfMatTabs.subscribe((res:any)=>{
+  this.variablesToShowInSelector = res;
+  console.log('^^^^^^^^^^' , this.variablesToShowInSelector)
   })
   }
 }
