@@ -9,7 +9,7 @@ import { MaterialServiceService } from '../shared/material-service.service';
 })
 export class HomeComponent {
   FormsData : any = {}
-  @Output() FormDataToEmit= new EventEmitter<any>();
+  @Output() emitVariablesOfAngularMaterial= new EventEmitter<any>();
 
   constructor(private angularMaterialService:MaterialServiceService) {}
 
@@ -21,7 +21,7 @@ export class HomeComponent {
       this.angularMaterialService.angularMaterialDropDownVaribale().subscribe((response:any)=>{
         this.FormsData = response?.result?.data
         console.log('&&&&&&&' , this.FormsData)
-        this.FormDataToEmit.emit(response?.result?.data)
+        this.emitVariablesOfAngularMaterial.emit(response?.result?.data)
       })
     }
 
