@@ -4,13 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AngularMaterialCommunicationService {
- private dataToSend = ' ';
+ private dataToSend = '';
   
   constructor() { }
 
 
   saveVariablesData(data:any){
-  return this.dataToSend = data
+  return this.dataToSend = data;
   }
 
   getSavedVariablesData(){
