@@ -21,7 +21,10 @@ export class HomeComponent {
       this.angularMaterialService.angularMaterialDropDownVaribale().subscribe((response:any)=>{
         this.FormsData = response?.result?.data
         console.log('&&&&&&&' , this.FormsData)
+        //here's we can send out data to other component by using @Input @Output decor 
         this.emitVariablesOfAngularMaterial.emit(response?.result?.data)
+           
+        
       })
     }
 
