@@ -9,12 +9,12 @@ import { AngularMaterialCommunicationService } from '../../angular-material-comm
 export class Form1Component {
   @Input() variablesOfMatTabs: any;
    variablesToShowInSelector : any = {}
-   variablesGettingFromCommunicationService : any = []
+   variablesGettingFromCommunicationService : any = {}
   constructor(private angularMaterialCommunication:AngularMaterialCommunicationService) {}
 
   ngOnInit(): void {
+    this.getVariablesByUsingServices()
    this.getVariablesByUsingInputOutDecor()
-   this.getVariablesByUsingServices()
   }
 
  getVariablesByUsingInputOutDecor(){

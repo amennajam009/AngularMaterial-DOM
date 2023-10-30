@@ -10,7 +10,7 @@ export class AngularMaterialCommunicationService {
 
 
   saveVariablesData(data:any){
-  return this.dataToSend = data;
+   return this.dataToSend = data;
   }
 
   getSavedVariablesData(){
