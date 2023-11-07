@@ -33,4 +33,10 @@ userFromModel(){
   })
 }
 
+Submit(){
+const savingtheform =   this.UserFrom.value;
+console.log(savingtheform)
+ 
+}
+
 }
