@@ -29,7 +29,9 @@ userFromModel(){
     city: new FormControl ('',[Validators.required,]),
     country: new FormControl ('',[Validators.required,]),
     pin_code: new FormControl ('',[Validators.required,]),
-    about_me: new FormControl ('',[Validators.required,]) 
+    about_me: new FormControl ('',[Validators.required,]),
+    select1: new FormControl ('',[Validators.required,]), 
+    select2: new FormControl ('',[Validators.required,])  
   })
 }
 
