@@ -28,4 +28,9 @@ export class BootstrapServiceService {
   testingImageApi(payLoad:any){
     return this.HttpClient.post("http://localhost:8080/ImageTestingData/MytestingApi",payLoad)
   }
+
+  //Json.Server API
+  createUserData(data:any){
+    return this.HttpClient.post("http://localhost:3000/UserData",data)
+  }
 }

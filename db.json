@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "UserData": [
+    {
+      "name": "fbgb",
+      "email": "fgbfg",
+      "first_name": "fgfgh",
+      "last_name": "gfhfg",
+      "address": "fbb",
+      "city": "fgfgb",
+      "country": "gfg",
+      "pin_code": "fgfghfg",
+      "about_me": "fghfgh",
+      "select1": "option-3",
+      "select2": "option-2",
+      "id": 1
+    },
+    {
+      "name": "testing",
+      "email": "testing",
+      "first_name": "cvcb",
+      "last_name": "bvcbvb",
+      "address": "vcvcvb",
+      "city": "cbcvb",
+      "country": "cvbvb",
+      "pin_code": "cvbc",
+      "about_me": "cvcbvbvcvbvb",
+      "select1": "option-1",
+      "select2": "option-4",
+      "id": 2
+    }
+  ]
+}

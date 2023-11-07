@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { BootstrapServiceService } from '../shared/bootstrap-service.service';
 
 @Component({
   selector: 'app-crud-main',
@@ -11,7 +12,8 @@ export class CRUDMainComponent {
   UserFrom: FormBuilder | any
 
 
-constructor(private FormBuilder:FormBuilder) { 
+constructor(private FormBuilder:FormBuilder,
+  private bootStrapService:BootstrapServiceService,) { 
   this.userFromModel()
 }
 
@@ -36,8 +38,17 @@ userFromModel(){
 }
 
 Submit(){
-const savingtheform =   this.UserFrom.value;
-console.log(savingtheform)
+  const CreateUserData = this.UserFrom.value;
+this.bootStrapService.createUserData(CreateUserData).subscribe((res:any)=>{
+  try {
+    if(this.UserFrom){
+      alert("Form Submit Succesfully")
+      this.UserFrom.reset()
+    }
+  } catch (error) {
+    alert("Please Fill All the Fields")
+  }
+})
  
 }
 
