@@ -40,8 +40,12 @@ export class BootstrapServiceService {
   }
   
   // delete Json Data by Id
-
   deleteUserData(id:any){
     return this.HttpClient.delete(`http://localhost:3000/UserData/${id}`)
+  }
+
+  //update UserData
+  updateUserData(id:number , data:any){
+   return this.HttpClient.patch(`http://localhost:3000/UserData/${id}`,data)
   }
 }
