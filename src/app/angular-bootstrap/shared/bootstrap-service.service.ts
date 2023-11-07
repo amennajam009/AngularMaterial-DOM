@@ -33,4 +33,9 @@ export class BootstrapServiceService {
   createUserData(data:any){
     return this.HttpClient.post("http://localhost:3000/UserData",data)
   }
+
+    //Json.Server API
+    getUserData(){
+      return this.HttpClient.get("http://localhost:3000/UserData")
+    }
 }
