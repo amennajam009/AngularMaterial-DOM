@@ -3,26 +3,26 @@
       <div class="col-lg-12">
         <div class="card radius-10 Formcard">
           <div class="card-body">
-            <form>
+            <form [formGroup]="UserFrom" (ngSubmit)="Submit()">
 
                 <h6 class="mb-0 mt-4 text-secondary">USER INFORMATION</h6>
                 <hr>
                 <div class="row g-3">
                   <div class="col-6">
                      <label class="form-label text-secondary">Username</label>
-                     <input type="text" class="form-control" >
+                     <input type="text" class="form-control"  formControlName="name">
                   </div>
                   <div class="col-6">
                    <label class="form-label text-secondary">Email address</label>
-                   <input type="text" class="form-control" >
+                   <input type="text" class="form-control" formControlName="email" >
                  </div>
                    <div class="col-6">
                      <label class="form-label text-secondary">First Name</label>
-                     <input type="text" class="form-control" >
+                     <input type="text" class="form-control"  formControlName="first_name">
                  </div>
                  <div class="col-6">
                      <label class="form-label text-secondary">Last Name</label>
-                     <input type="text" class="form-control">
+                     <input type="text" class="form-control" formControlName="last_name">
                  </div>
                  <div class="col-6">
                  <select formControlName="variable3"  class="form-control" >
@@ -48,31 +48,31 @@
                <div class="row g-3">
                 <div class="col-12">
                   <label class="form-label text-secondary">Address</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" formControlName="address">
                  </div>
                  <div class="col-6">
                     <label class="form-label text-secondary">City</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="city">
                  </div>
                  <div class="col-6">
                   <label class="form-label text-secondary">Country</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" formControlName="country">
                 </div>
                   <div class="col-6">
                     <label class="form-label text-secondary">Pin Code</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="pin_code">
                 </div>
                 <div class="col-6">
                     <label class="form-label text-secondary">Last Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="last_name">
                 </div>
                 <div class="col-12">
                   <label class="form-label text-secondary">About Me</label>
-                  <textarea class="form-control" rows="4" cols="4" placeholder="Describe yourself..."></textarea>
+                  <textarea class="form-control" rows="4" cols="4" placeholder="Describe yourself..." formControlName="about_me"></textarea>
                  </div>
                 </div>
                 <div class="text-start mt-3">
-                  <button type="button" class="btn px-4" style="background-color: #2ea963;color:white">Save Changes</button>
+                  <button type="submit" class="btn px-4" style="background-color: #2ea963;color:white">Save Changes</button>
                 </div>
                 </form>
           </div>

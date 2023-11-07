@@ -11,7 +11,9 @@ export class CRUDMainComponent {
   UserFrom: FormBuilder | any
 
 
-constructor(private FormBuilder:FormBuilder) { }
+constructor(private FormBuilder:FormBuilder) { 
+  this.userFromModel()
+}
 
 ngOnInit(): void {
 
