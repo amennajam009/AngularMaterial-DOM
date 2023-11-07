@@ -7,7 +7,7 @@ import { BootstrapServiceService } from '../shared/bootstrap-service.service';
   styleUrls: ['./crud-listing.component.css']
 })
 export class CrudListingComponent {
-
+ UserDatalist:any = []
 
   constructor(private bootStrapService:BootstrapServiceService) { }
   
@@ -20,7 +20,7 @@ export class CrudListingComponent {
   //get UserData
 getUserData(){
   this.bootStrapService.getUserData().subscribe((res:any)=>{
-    res
+    this.UserDatalist = res
   })
 }
 }

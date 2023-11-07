@@ -35,7 +35,7 @@ export class BootstrapServiceService {
   }
 
     //Json.Server API
-    getUserData(){
+  getUserData(){
       return this.HttpClient.get("http://localhost:3000/UserData")
-    }
+  }
 }

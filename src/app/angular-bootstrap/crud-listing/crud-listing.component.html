@@ -1,54 +1,27 @@
-<h1 class="text-center mt-4">foodies-Analytics !</h1>
-<h4 class="text-center mt-4">Banner-<span style="color:#FFB000 ;">Image</span>-Analytics</h4>
+<h1 class="text-center mt-4">USER - LISTING !</h1>
+<h4 class="text-center mt-4">User-<span style="color:#FFB000 ;">Data</span>-Analytics</h4>
 <table class="table table-striped table-hover table-sm">
     <thead class="text-dark">
       <tr>
         <th class="text-center">#</th>
-        <th class="text-center">Banner Image</th>
-        <th class="text-center">Status</th>
-        <th class="text-center">status summary</th>
-        <th class="text-center">status summary</th>
+        <th class="text-center">first_name</th>
+        <th class="text-center">last_name</th>
+        <th class="text-center">country</th>
+        <th class="text-center">pin_code</th>
         <th class="text-center" colspan="2">Actions</th>
 
       </tr>
     </thead>
     <tbody class="text-dark">
-      <tr>
-        <th class="text-center">1</th>
-        <td class="text-center text-dark">dfgfdg</td>
-        <td class="text-center">gbfgb</td>
-        <td class="text-center" >fgfgb</td>
-        <td class="text-center">ffgggg</td>
+      <tr *ngFor="let userData of UserDatalist; let i=index">
+        <th class="text-center">{{i+1}}</th>
+        <td class="text-center text-dark">{{userData.first_name}}</td>
+        <td class="text-center">{{userData.last_name}}</td>
+        <td class="text-center" >{{userData.country}}</td>
+        <td class="text-center">{{userData.pin_code}}</td>
         <td><i class="fa-solid fa-eye text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
-        
-        <td class="text-center"><button class="btn btn-outline-danger" >Hard Delete</button></td>
-      </tr>
-      <tr>
-        <th class="text-center">1</th>
-        <td class="text-center text-dark">dfgfdg</td>
-        <td class="text-center">gbfgb</td>
-        <td class="text-center" >fgfgb</td>
-        <td class="text-center">ffgggg</td>
-        <td><i class="fa-solid fa-eye text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" ></i></td>
-        <td class="text-center"><button class="btn btn-outline-danger" >Hard Delete</button></td>
-      </tr>
-      <tr>
-        <th class="text-center">1</th>
-        <td class="text-center text-dark">dfgfdg</td>
-        <td class="text-center">gbfgb</td>
-        <td class="text-center" >fgfgb</td>
-        <td class="text-center">ffgggg</td>
-        <td><i class="fa-solid fa-eye text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" ></i></td>
-        <td class="text-center"><button class="btn btn-outline-danger" >Hard Delete</button></td>
-      </tr>
-      <tr>
-        <th class="text-center">1</th>
-        <td class="text-center text-dark">dfgfdg</td>
-        <td class="text-center">gbfgb</td>
-        <td class="text-center" >fgfgb</td>
-        <td class="text-center">ffgggg</td>
-        <td><i class="fa-solid fa-eye text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" ></i></td>
-        <td class="text-center"><button class="btn btn-outline-danger" >Hard Delete</button></td>
+    
+        <td class="text-center"><button class="btn btn-outline-danger">Hard Delete</button></td>
       </tr>
     </tbody>
   </table>
