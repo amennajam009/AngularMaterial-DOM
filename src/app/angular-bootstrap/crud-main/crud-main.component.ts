@@ -21,15 +21,15 @@ ngOnInit(): void {
 
 userFromModel(){
   this.UserFrom = this.FormBuilder.group({
-    variable1: new FormControl ('',[Validators.required]),
-    variable2: new FormControl ('',[Validators.required]),
-    variable3: new FormControl ('',[Validators.required,]),
-    variable4: new FormControl ('',[Validators.required,]),
-    variable5: new FormControl ('',[Validators.required,]),
-    variable6: new FormControl ('',[Validators.required,]),
-    variable7: new FormControl ('',[Validators.required,]),
-    variable8: new FormControl ('',[Validators.required,]),
-    variable9: new FormControl ('',[Validators.required,]),
+    name: new FormControl ('',[Validators.required]),
+    email: new FormControl ('',[Validators.required]),
+    first_name: new FormControl ('',[Validators.required,]),
+    last_name: new FormControl ('',[Validators.required,]),
+    address: new FormControl ('',[Validators.required,]),
+    city: new FormControl ('',[Validators.required,]),
+    country: new FormControl ('',[Validators.required,]),
+    pin_code: new FormControl ('',[Validators.required,]),
+    about_me: new FormControl ('',[Validators.required,]) 
   })
 }
 
