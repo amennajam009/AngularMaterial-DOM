@@ -21,6 +21,21 @@ export class CrudListingComponent {
 getUserData(){
   this.bootStrapService.getUserData().subscribe((res:any)=>{
     this.UserDatalist = res
+    
+  })
+}
+
+
+//delete UserDataById
+deleteUserDataById(id:any){
+  this.bootStrapService.deleteUserData(id).subscribe((res:any)=>{
+    if(id){
+      alert("You sure You want to Delete UserData")
+    }
+    else{
+      alert("Id Not Exist")
+    }
+    this.UserDatalist = this.UserDatalist?.filter((list: any) => list.id !== id);
   })
 }
 }
