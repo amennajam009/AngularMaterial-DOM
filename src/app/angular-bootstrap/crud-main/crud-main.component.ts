@@ -18,7 +18,7 @@ constructor(private FormBuilder:FormBuilder,
 }
 
 ngOnInit(): void {
-
+this.getUserData()
 }
 
 userFromModel(){
@@ -38,18 +38,24 @@ userFromModel(){
 }
 
 Submit(){
-  const CreateUserData = this.UserFrom.value;
+const CreateUserData = this.UserFrom.value;
 this.bootStrapService.createUserData(CreateUserData).subscribe((res:any)=>{
-  try {
-    if(this.UserFrom){
-      alert("Form Submit Succesfully")
-      this.UserFrom.reset()
-    }
-  } catch (error) {
+  if(this.UserFrom){
+    alert("Form Submit Succesfully")
+    this.UserFrom.reset()
+  }
+  else{
     alert("Please Fill All the Fields")
   }
 })
- 
+}
+
+
+//get UserData
+getUserData(){
+  this.bootStrapService.getUserData().subscribe((res:any)=>{
+    res
+  })
 }
 
 }
