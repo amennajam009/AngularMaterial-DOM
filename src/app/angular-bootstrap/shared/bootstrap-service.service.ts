@@ -34,8 +34,14 @@ export class BootstrapServiceService {
     return this.HttpClient.post("http://localhost:3000/UserData",data)
   }
 
-    //Json.Server API
+  // get Json.Server API
   getUserData(){
       return this.HttpClient.get("http://localhost:3000/UserData")
+  }
+  
+  // delete Json Data by Id
+
+  deleteUserData(id:any){
+    return this.HttpClient.delete(`http://localhost:3000/UserData/${id}`)
   }
 }
