@@ -9,11 +9,11 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class CrudListingComponent {
  UserDatalist:any = []
- updatedvalues:any = []
+ DataById:any = []
  UserUpdateFrom: FormBuilder | any
   constructor(private bootStrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder) { 
-    this.userUpdateFromModel()
+    
   }
   
   ngOnInit(): void {
@@ -43,9 +43,11 @@ deleteUserDataById(id:any){
   })
 }
 
-userUpdateFromModel(){
+getUpdateFromModel(id:any){
+  this.bootStrapService.getById(id).subscribe((res:any)=>{
+  this.DataById = res;
   this.UserUpdateFrom = this.FormBuilder.group({
-    name: new FormControl (this.UserDatalist?.name,[Validators.required]),
+    name: new FormControl (this.DataById?.name,[Validators.required]),
     email: new FormControl (this.UserDatalist?.email,[Validators.required]),
     first_name: new FormControl (this.UserDatalist?.first_name,[Validators.required,]),
     last_name: new FormControl (this.UserDatalist?.last_name,[Validators.required,]),
@@ -56,6 +58,7 @@ userUpdateFromModel(){
     about_me: new FormControl ('',[Validators.required,]),
     select1: new FormControl ('',[Validators.required,]), 
     select2: new FormControl ('',[Validators.required,])  
+  })
   })
 }
 

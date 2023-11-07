@@ -19,7 +19,7 @@
         <td class="text-center">{{userData.last_name}}</td>
         <td class="text-center" >{{userData.country}}</td>
         <td class="text-center">{{userData.pin_code}}</td>
-        <td><i class="fa-solid fa-eye text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+        <td><i class="fa-solid fa-eye text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getUpdateFromModel(userData.id)"></i></td>
     
         <td class="text-center"><button class="btn btn-outline-danger" (click)="deleteUserDataById(userData.id)">Hard Delete</button></td>
       </tr>

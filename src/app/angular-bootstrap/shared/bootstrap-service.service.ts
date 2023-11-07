@@ -44,8 +44,14 @@ export class BootstrapServiceService {
     return this.HttpClient.delete(`http://localhost:3000/UserData/${id}`)
   }
 
+  //getbyId
+  getById(id:any){
+    return this.HttpClient.get(`http://localhost:3000/UserData/${id}`)
+  }
   //update UserData
   updateUserData(id:number , data:any){
    return this.HttpClient.patch(`http://localhost:3000/UserData/${id}`,data)
   }
+
+
 }
