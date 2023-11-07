@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgxSpinnerModule} from 'ngx-spinner';
 
+
 @NgModule({
   declarations: [
     AppComponent,
