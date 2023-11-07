@@ -18,7 +18,7 @@ constructor(private FormBuilder:FormBuilder,
 }
 
 ngOnInit(): void {
-this.getUserData()
+
 }
 
 userFromModel(){
@@ -50,12 +50,5 @@ this.bootStrapService.createUserData(CreateUserData).subscribe((res:any)=>{
 })
 }
 
-
-//get UserData
-getUserData(){
-  this.bootStrapService.getUserData().subscribe((res:any)=>{
-    res
-  })
-}
 
 }
