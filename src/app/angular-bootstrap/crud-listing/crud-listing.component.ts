@@ -13,7 +13,7 @@ export class CrudListingComponent {
  UserUpdateFrom: FormBuilder | any
   constructor(private bootStrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder) { 
-    
+  this.updateFormModal()
   }
   
   ngOnInit(): void {
@@ -43,14 +43,30 @@ deleteUserDataById(id:any){
   })
 }
 
+updateFormModal(){
+  this.UserUpdateFrom = this.FormBuilder.group({
+    name: new FormControl ('',[Validators.required]),
+    email: new FormControl ('',[Validators.required]),
+    first_name: new FormControl ('',[Validators.required,]),
+    last_name: new FormControl ('',[Validators.required,]),
+    address: new FormControl ('',[Validators.required,]),
+    city: new FormControl ('',[Validators.required,]),
+    country: new FormControl ('',[Validators.required,]),
+    pin_code: new FormControl ('',[Validators.required,]),
+    about_me: new FormControl ('',[Validators.required,]),
+    select1: new FormControl ('',[Validators.required,]), 
+    select2: new FormControl ('',[Validators.required,])  
+  })
+}
+
 getUpdateFromModel(id:any){
   this.bootStrapService.getById(id).subscribe((res:any)=>{
   this.DataById = res;
   this.UserUpdateFrom = this.FormBuilder.group({
     name: new FormControl (this.DataById?.name,[Validators.required]),
-    email: new FormControl (this.UserDatalist?.email,[Validators.required]),
-    first_name: new FormControl (this.UserDatalist?.first_name,[Validators.required,]),
-    last_name: new FormControl (this.UserDatalist?.last_name,[Validators.required,]),
+    email: new FormControl (this.DataById?.email,[Validators.required]),
+    first_name: new FormControl (this.DataById?.first_name,[Validators.required,]),
+    last_name: new FormControl (this.DataById?.last_name,[Validators.required,]),
     address: new FormControl ('',[Validators.required,]),
     city: new FormControl ('',[Validators.required,]),
     country: new FormControl ('',[Validators.required,]),
@@ -62,5 +78,6 @@ getUpdateFromModel(id:any){
   })
 }
 
-
 }
+
+
