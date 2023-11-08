@@ -72,8 +72,8 @@ getUpdateFromModel(id:any){
     country: new FormControl (this.DataById?.country,[Validators.required,]),
     pin_code: new FormControl (this.DataById?.pin_code,[Validators.required,]),
     about_me: new FormControl (this.DataById?.about_me,[Validators.required,]),
-    select1: new FormControl ('',[Validators.required,]), 
-    select2: new FormControl ('',[Validators.required,])  
+    select1: new FormControl (this.DataById?.select1,[Validators.required,]), 
+    select2: new FormControl (this.DataById?.select2,[Validators.required,])  
   })
   })
 }
