@@ -9,6 +9,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 export class StateCrudComponent {
   StateValues: any = [] = []
   UserFrom: FormBuilder | any
+  i:any | number
   
 
 
@@ -43,6 +44,8 @@ Submit(){
   console.log('formvalues',this.StateValues)
 }
 
-
+deleteStateValueByIndex(i:number){
+ this.StateValues.splice(i,1)
+}
 
 }

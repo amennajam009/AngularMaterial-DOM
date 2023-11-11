@@ -106,7 +106,7 @@
         <td class="text-center">{{data.pin_code}}</td>
         <td ><i class="fa fa-pencil text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
     
-        <td class="text-center"><button class="btn btn-outline-danger">Hard Delete</button></td>
+        <td class="text-center"><button class="btn btn-outline-danger" (click)="deleteStateValueByIndex(i)">Hard Delete</button></td>
       </tr>
     </tbody>
   </table>
