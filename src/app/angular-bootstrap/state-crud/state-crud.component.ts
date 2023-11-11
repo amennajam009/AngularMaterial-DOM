@@ -9,7 +9,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 export class StateCrudComponent {
   StateValues: any = [] = []
   UserFrom: FormBuilder | any
-  i:any | number
+  i: any | number
   
 
 
