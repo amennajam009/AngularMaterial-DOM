@@ -10,6 +10,7 @@ import { BootstrapServiceService } from '../shared/bootstrap-service.service';
 })
 export class TestingComComponent {
   @Input() MyVariables:any = [] = []
+  @Input() dataToSend: string | any
   testingCompForm : FormBuilder | any;
   variables :any = []
   constructor(private AngularBootstrapCommunationService:AngularBootstrapCommunationService,
@@ -20,6 +21,7 @@ export class TestingComComponent {
 
   ngOnInit(): void {
     this.myvariablesfunction()
+    console.log(this.dataToSend)
   }
 
 

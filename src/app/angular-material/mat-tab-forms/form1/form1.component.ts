@@ -8,6 +8,7 @@ import { AngularMaterialCommunicationService } from '../../angular-material-comm
 })
 export class Form1Component {
   @Input() variablesOfMatTabs: any;
+  @Input() amen : any
    variablesToShowInSelector : any = {}
    variablesGettingFromCommunicationService : any = {}
   constructor(private angularMaterialCommunication:AngularMaterialCommunicationService) {}
@@ -15,6 +16,8 @@ export class Form1Component {
   ngOnInit(): void {
     this.getVariablesByUsingServices()
    this.getVariablesByUsingInputOutDecor()
+
+   console.log('testingggggg', this.amen)
   }
 
  getVariablesByUsingInputOutDecor(){

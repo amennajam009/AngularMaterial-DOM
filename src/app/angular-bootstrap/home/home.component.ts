@@ -11,6 +11,7 @@ import { AngularBootstrapCommunationService } from '../shared/angular-bootstrap-
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  dataToSend: string = ""
   variabledata:any = [] = [];
   dropDownVariables : FormBuilder | any;
   imageTesting : FormBuilder | any;
@@ -64,5 +65,8 @@ SubmitOrder(){
         this.variabledata
       );
     })
+  }
+  sendHelloWorldToOtherComponent(){
+    this.dataToSend = "Hello World"
   }
 }
