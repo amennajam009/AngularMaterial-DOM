@@ -7,8 +7,9 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./state-crud.component.css']
 })
 export class StateCrudComponent {
-  StateValues: any = {}
+  StateValues: any = [] = []
   UserFrom: FormBuilder | any
+  
 
 
 constructor(private FormBuilder:FormBuilder) { 
@@ -38,7 +39,7 @@ userFromModel(){
 
 Submit(){
   const formValues = this.UserFrom.value
-  this.StateValues = formValues
+  this.StateValues.push(formValues)
   console.log('formvalues',this.StateValues)
 }
 
