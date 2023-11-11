@@ -12,8 +12,7 @@ export class HomeComponent {
   FormsData: any = {};
   @Output() emitVariablesOfAngularMaterial = new EventEmitter<any>();
   sendindata: any = {};
-  dataToSend : string = "Hello World"
-
+  dataToSend : string | any
   constructor(
     private angularMaterialService: MaterialServiceService,
     private angularMaterialCommunication: AngularMaterialCommunicationService
@@ -21,6 +20,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.getMaterialVariable();
+    this.dataToSend = this.sendHelloWorldToComponent()
   }
 
   getMaterialVariable() {
@@ -37,7 +37,8 @@ export class HomeComponent {
       });
   }
 
-  // sendHelloWorldToComponent(){
-  //   this.dataToSend = "Hello World"
-  // }
+  sendHelloWorldToComponent(){
+    this.dataToSend = "Hello World"
+  }
+
 }

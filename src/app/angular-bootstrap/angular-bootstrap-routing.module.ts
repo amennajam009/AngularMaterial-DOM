@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { TestingComComponent } from './testing-com/testing-com.component';
 import { CRUDMainComponent } from './crud-main/crud-main.component';
 import { CrudListingComponent } from './crud-listing/crud-listing.component';
+import { StateCrudComponent } from './state-crud/state-crud.component';
 
 const routes: Routes = [{ path: '', component: AngularBootstrapComponent,
 children:[
@@ -13,6 +14,8 @@ children:[
   {path:'testing-com' , component:TestingComComponent},
   {path:'crud-main', component:CRUDMainComponent},
   {path:'crud-listing', component:CrudListingComponent},
+  {path:'state-crud', component:StateCrudComponent},
+
 
   
 

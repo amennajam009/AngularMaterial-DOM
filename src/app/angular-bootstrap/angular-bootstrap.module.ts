@@ -10,6 +10,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { CRUDMainComponent } from './crud-main/crud-main.component';
 import { CrudListingComponent } from './crud-listing/crud-listing.component';
+import { StateCrudComponent } from './state-crud/state-crud.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CrudListingComponent } from './crud-listing/crud-listing.component';
     HeaderComponent,
     CRUDMainComponent,
     CrudListingComponent,
+    StateCrudComponent,
   ],
   imports: [
     CommonModule,
