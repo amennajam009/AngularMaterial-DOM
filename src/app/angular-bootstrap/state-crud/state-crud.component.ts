@@ -13,7 +13,7 @@ export class StateCrudComponent {
   i: any | number
   selectedIndex: number | undefined;
   isEdit : boolean = false
-  
+  selectedUser:any
 
 
 constructor(private FormBuilder:FormBuilder) { 
@@ -72,25 +72,31 @@ updateEditValues(data: any, index: number) {
   console.log('Updating data:', data);
   console.log('Index:', index);
 
-  const selectedUser = this.StateValues[index];
-  console.log('selectedUser', selectedUser);
+ this.selectedUser = this.StateValues[index];
+  console.log('selectedUser', this.selectedUser);
 
   this.UpdateFrom.patchValue({
-    name: selectedUser?.name,
-    email: selectedUser?.email,
-    first_name: selectedUser?.first_name,
-    last_name: selectedUser?.last_name,
-    address: selectedUser?.address,
-    city: selectedUser?.city,
-    country: selectedUser?.country,
-    pin_code: selectedUser?.pin_code,
-    about_me: selectedUser?.about_me,
-    select1: selectedUser?.select1,
-    select2: selectedUser?.select2,
+    name: this.selectedUser?.name,
+    email: this.selectedUser?.email,
+    first_name: this.selectedUser?.first_name,
+    last_name: this.selectedUser?.last_name,
+    address: this.selectedUser?.address,
+    city: this.selectedUser?.city,
+    country:this.selectedUser?.country,
+    pin_code:this.selectedUser?.pin_code,
+    about_me: this.selectedUser?.about_me,
+    select1: this.selectedUser?.select1,
+    select2: this.selectedUser?.select2,
   });
 }
 
 SubmitUpdated(){
-  
+ const getselectedindex = this.selectedUser
+ console.log()
+  const formValues = this.UpdateFrom.value
+  // formValues.push(this.selectedUser)
+  // console.log('formvalues',this.StateValues)
 }
+
+
 }
