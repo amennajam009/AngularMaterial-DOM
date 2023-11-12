@@ -95,7 +95,6 @@ SubmitUpdated() {
   console.log(this.selectedIndex)
   let formValues = this.UpdateFrom.value;
 
-  // this.selectedIndex = formValues
   this.StateValues[this.selectedIndex] = formValues
   console.log('hhhhh',this.selectedIndex)
   console.log('Updated StateValues:', this.StateValues);
