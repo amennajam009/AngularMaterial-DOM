@@ -3,7 +3,7 @@
       <div class="col-lg-12">
         <div class="card radius-10 Formcard">
           <div class="card-body">
-            <form [formGroup]="UserFrom" (ngSubmit)="Submit()">
+            <form [formGroup]="UserFrom" (ngSubmit)="SubmitUpdated()">
 
                 <h6 class="mb-0 mt-4 text-secondary">USER INFORMATION</h6>
                 <hr>
@@ -99,7 +99,7 @@
     </thead>
     <tbody class="text-dark">
       <tr *ngFor="let data of StateValues ; let i = index">
-        <th class="text-center"></th>
+        <th class="text-center">{{i+1}}</th>
         <td class="text-center text-dark">{{data.first_name}}</td>
         <td class="text-center">{{data.last_name}}</td>
         <td class="text-center" >{{data.country}}</td>

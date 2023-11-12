@@ -12,6 +12,7 @@ export class StateCrudComponent {
   UpdateFrom: FormBuilder | any;
   i: any | number
   selectedIndex: number | undefined;
+  isEdit : boolean = false
   
 
 
@@ -87,5 +88,9 @@ updateEditValues(data: any, index: number) {
     select1: selectedUser?.select1,
     select2: selectedUser?.select2,
   });
+}
+
+SubmitUpdated(){
+  
 }
 }
