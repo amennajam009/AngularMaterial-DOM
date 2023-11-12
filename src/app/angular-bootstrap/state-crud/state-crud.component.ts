@@ -73,6 +73,7 @@ updateEditValues(data: any, index: number) {
   console.log('Index:', index);
 
  this.selectedUser = this.StateValues[index];
+ this.selectedIndex = index
   console.log('selectedUser', this.selectedUser);
 
   this.UpdateFrom.patchValue({
@@ -90,12 +91,13 @@ updateEditValues(data: any, index: number) {
   });
 }
 
-SubmitUpdated(){
- const getselectedindex = this.selectedUser
- console.log()
-  const formValues = this.UpdateFrom.value
-  // formValues.push(this.selectedUser)
-  // console.log('formvalues',this.StateValues)
+SubmitUpdated(data:any ,index: number) {
+  const formValues = this.UpdateFrom.value;
+
+  // Update the selected user in the StateValues array at the specified index
+  this.StateValues[index] = formValues
+
+  console.log('Updated StateValues:', this.StateValues);
 }
 
 
