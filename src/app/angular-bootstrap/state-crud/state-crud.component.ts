@@ -94,7 +94,6 @@ updateEditValues(data: any, index: number) {
 SubmitUpdated() {
   console.log(this.selectedIndex)
   let formValues = this.UpdateFrom.value;
-
   this.StateValues[this.selectedIndex] = formValues
   console.log('hhhhh',this.selectedIndex)
   console.log('Updated StateValues:', this.StateValues);
