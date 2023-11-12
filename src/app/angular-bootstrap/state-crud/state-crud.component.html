@@ -112,7 +112,7 @@
   </table>
 
 <div class="div" *ngFor="let data of StateValues ; let i = index" >
-  <form [formGroup]="UpdateFrom"  (ngSubmit)="SubmitUpdated(data  , i)">
+  <form [formGroup]="UpdateFrom"  (ngSubmit)="SubmitUpdated(i)">
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">

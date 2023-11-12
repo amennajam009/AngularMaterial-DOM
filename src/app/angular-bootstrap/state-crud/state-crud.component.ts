@@ -91,10 +91,9 @@ updateEditValues(data: any, index: number) {
   });
 }
 
-SubmitUpdated(data:any ,index: number) {
+SubmitUpdated(index:number) {
   const formValues = this.UpdateFrom.value;
 
-  // Update the selected user in the StateValues array at the specified index
   this.StateValues[index] = formValues
 
   console.log('Updated StateValues:', this.StateValues);
