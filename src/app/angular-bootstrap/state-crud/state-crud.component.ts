@@ -48,9 +48,7 @@ Submit(){
   console.log('formvalues',this.StateValues)
 }
 
-deleteStateValueByIndex(i:number){
- this.StateValues.splice(i,1)
-}
+
 
 UpdateFromModel(){
   this.UpdateFrom = this.FormBuilder.group({
@@ -89,6 +87,9 @@ updateEditValues( index: number) {
     select2: this.selectedUser?.select2,
   });
 }
+deleteStateValueByIndex(i:number){
+  this.StateValues.splice(i,1)
+ }
 
 SubmitUpdated() {
   console.log(this.selectedIndex)
