@@ -8,13 +8,15 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class StateCrudComponent {
   StateValues: any = [] = []
-  UserFrom: FormBuilder | any
+  UserFrom: FormBuilder | any;
+  UpdateFrom: FormBuilder | any;
   i: any | number
   
 
 
 constructor(private FormBuilder:FormBuilder) { 
   this.userFromModel()
+  this.UpdateFromModel()
 }
 
 ngOnInit(): void {
@@ -46,6 +48,41 @@ Submit(){
 
 deleteStateValueByIndex(i:number){
  this.StateValues.splice(i,1)
+}
+
+UpdateFromModel(){
+  this.UpdateFrom = this.FormBuilder.group({
+    name: new FormControl ('',[Validators.required]),
+    email: new FormControl ('',[Validators.required]),
+    first_name: new FormControl ('',[Validators.required,]),
+    last_name: new FormControl ('',[Validators.required,]),
+    address: new FormControl ('',[Validators.required,]),
+    city: new FormControl ('',[Validators.required,]),
+    country: new FormControl ('',[Validators.required,]),
+    pin_code: new FormControl ('',[Validators.required,]),
+    about_me: new FormControl ('',[Validators.required,]),
+    select1: new FormControl ('',[Validators.required,]), 
+    select2: new FormControl ('',[Validators.required,])  
+  })
+}
+
+updateEditValues(i: number) {
+  // Assuming StateValues is an array of objects, and you want to update the UpdateFrom form
+  const selectedUser = this.StateValues[i];
+
+  this.UpdateFrom.patchValue({
+    name: selectedUser?.name,
+    email: selectedUser?.email,
+    first_name: selectedUser?.first_name,
+    last_name: selectedUser?.last_name,
+    address: selectedUser?.address,
+    city: selectedUser?.city,
+    country: selectedUser?.country,
+    pin_code: selectedUser?.pin_code,
+    about_me: selectedUser?.about_me,
+    select1: selectedUser?.select1,
+    select2: selectedUser?.select2,
+  });
 }
 
 }
