@@ -11,7 +11,7 @@ export class StateCrudComponent {
   UserFrom: FormBuilder | any;
   UpdateFrom: FormBuilder | any;
   i: any | number
-  selectedIndex: number | undefined;
+  selectedIndex: number | any;
   isEdit : boolean = false
   selectedUser:any
 
@@ -93,9 +93,10 @@ updateEditValues(data: any, index: number) {
 
 SubmitUpdated() {
   console.log(this.selectedIndex)
-  const formValues = this.UpdateFrom.value;
+  let formValues = this.UpdateFrom.value;
 
-  this.selectedIndex = formValues
+  // this.selectedIndex = formValues
+  this.StateValues[this.selectedIndex] = formValues
   console.log('hhhhh',this.selectedIndex)
   console.log('Updated StateValues:', this.StateValues);
 }
