@@ -91,11 +91,12 @@ updateEditValues(data: any, index: number) {
   });
 }
 
-SubmitUpdated(index:number) {
+SubmitUpdated() {
+  console.log(this.selectedIndex)
   const formValues = this.UpdateFrom.value;
 
-  this.StateValues[index] = formValues
-
+  this.selectedIndex = formValues
+  console.log('hhhhh',this.selectedIndex)
   console.log('Updated StateValues:', this.StateValues);
 }
 
