@@ -68,8 +68,7 @@ UpdateFromModel(){
   })
 }
 
-updateEditValues(data: any, index: number) {
-  console.log('Updating data:', data);
+updateEditValues( index: number) {
   console.log('Index:', index);
 
  this.selectedUser = this.StateValues[index];
