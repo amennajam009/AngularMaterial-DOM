@@ -11,6 +11,7 @@ export class StateCrudComponent {
   UserFrom: FormBuilder | any;
   UpdateFrom: FormBuilder | any;
   i: any | number
+  selectedIndex: number | undefined;
   
 
 
@@ -66,9 +67,12 @@ UpdateFromModel(){
   })
 }
 
-updateEditValues(i: number) {
-  // Assuming StateValues is an array of objects, and you want to update the UpdateFrom form
-  const selectedUser = this.StateValues[i];
+updateEditValues(data: any, index: number) {
+  console.log('Updating data:', data);
+  console.log('Index:', index);
+
+  const selectedUser = this.StateValues[index];
+  console.log('selectedUser', selectedUser);
 
   this.UpdateFrom.patchValue({
     name: selectedUser?.name,
@@ -84,5 +88,4 @@ updateEditValues(i: number) {
     select2: selectedUser?.select2,
   });
 }
-
 }
