@@ -66,7 +66,7 @@ UpdateFromModel(){
   })
 }
 
-updateEditValues( index: number) {
+updateEditValues( index: any) {
   console.log('Index:', index);
 
  this.selectedUser = this.StateValues[index];
