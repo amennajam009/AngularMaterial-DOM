@@ -17,8 +17,7 @@ import { LayoutComponent } from './layout/layout.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { StateCrudComponent } from './state-crud/state-crud.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { StateCrudComponent } from './state-crud/state-crud.component'
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -31,7 +30,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     Form5Component,
     LayoutComponent,
     MainPageComponent,
-    StateCrudComponent,
+    StateCrudComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +41,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSelectModule,
     NgxSpinnerModule,
     NgSelectModule,
-    MatDialogModule
   ]
 })
 export class AngularMaterialModule { }
