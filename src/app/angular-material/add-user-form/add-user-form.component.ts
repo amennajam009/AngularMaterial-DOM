@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-user-form',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-user-form.component.css']
 })
 export class AddUserFormComponent {
+  constructor(private _dialogue:MatDialog) { 
+  }
+  
+  ngOnInit(): void {
+  }
 
+  close(){
+    this._dialogue.closeAll()
+  }
 }
