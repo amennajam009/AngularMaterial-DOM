@@ -20,6 +20,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { StateCrudComponent } from './state-crud/state-crud.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddUserFormComponent } from './add-user-form/add-user-form.component';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -43,6 +44,7 @@ import { AddUserFormComponent } from './add-user-form/add-user-form.component';
     NgxSpinnerModule,
     NgSelectModule,
     MatDialogModule,
+    MatTableModule,
     ReactiveFormsModule,
     FormsModule,
   ]
