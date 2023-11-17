@@ -44,6 +44,16 @@ export class AddUserFormComponent {
   })
   }
 
+  // MyPayLoad(){
+  //   const formValues = this.AngularMaterialForm.value;
+  //   console.log('myFormValeus',formValues)
+  // }
+
+  Submit(){
+    const formValues = this.AngularMaterialForm.value;
+    console.log('myFormValeus',formValues)
+  }
+
   close(){
     this._dialogue.closeAll()
   }

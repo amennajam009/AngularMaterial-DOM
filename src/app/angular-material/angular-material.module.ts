@@ -42,7 +42,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSelectModule,
     NgxSpinnerModule,
     NgSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    
   ]
 })
 export class AngularMaterialModule { }
