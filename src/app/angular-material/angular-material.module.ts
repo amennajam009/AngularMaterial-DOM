@@ -19,6 +19,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { StateCrudComponent } from './state-crud/state-crud.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -31,19 +32,19 @@ import {MatDialogModule} from '@angular/material/dialog';
     Form5Component,
     LayoutComponent,
     MainPageComponent,
-    StateCrudComponent
+    StateCrudComponent,
+    AddUserFormComponent
   ],
   imports: [
     CommonModule,
     AngularMaterialRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
     MatTabsModule,
     MatSelectModule,
     NgxSpinnerModule,
     NgSelectModule,
     MatDialogModule,
-    
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class AngularMaterialModule { }
