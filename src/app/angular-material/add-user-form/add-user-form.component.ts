@@ -24,6 +24,9 @@ export class AddUserFormComponent {
   
   ngOnInit(): void {
   console.log('dataToGettt',this.editData)
+  if(this.editData){
+    this.setMyEditData(this.editData)
+  }
   }
 
 
@@ -70,12 +73,40 @@ export class AddUserFormComponent {
     return payload
   }
 
+  setMyEditData(data:any){
+    this.AngularMaterialForm.patchValue({
+      first_name: data?.first_name,
+      last_name: data?.last_name,
+      email_address: data?.email_address,
+      education: data?.education,
+      house_no: data?.house_no,
+      last_name_2: data?.last_name_2,
+      checkbox_1: data?.checkbox_1,
+      checkbox_2: data?.checkbox_2,
+      checkbox_3: data?.checkbox_3,
+      address: data?.address,
+      city: data?.city,
+      country: data?.country,
+      pin_code: data?.pin_code,
+      last_name_3:data?.last_name_3, 
+      about_me:data?.about_me,
+    })
+  }
   Submit(){
-    const formValues = this.MyPayLoad()
-    this.saveDataInState.push(formValues)
-    this.AngularMaterialCommunicationService.saveMyStateData(this.saveDataInState)
-    console.log('storingDataInState' , this.saveDataInState)
-    console.log('myFormValues',formValues)
+    if(!this.editData){
+      const formValues = this.MyPayLoad()
+      this.saveDataInState.push(formValues)
+      this.AngularMaterialCommunicationService.saveMyStateData(this.saveDataInState)
+      console.log('storingDataInState' , this.saveDataInState)
+      console.log('myFormValues',formValues)
+    }else{
+      console.log('selecteddata',this.data)
+      const formValues = this.MyPayLoad()
+      this.saveDataInState[this.data] = formValues
+      console.log('hhhhh',this.data)
+      console.log('Updated StateValues:', this.saveDataInState);
+    }
+
   }
 
   close(){
