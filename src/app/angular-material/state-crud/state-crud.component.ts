@@ -41,16 +41,17 @@ deleteUserData(i:any){
 }
 
 
-UpdateStaff(data:object){
+UpdateStaff(data:object , i :number){
   const dialogueRef =  this._dialogue.open(AddUserFormComponent , {
     data:{
-      EditData:data
+      EditData:data,
+      index:i
     }
   })
   
-  //   dialogueRef.afterClosed()?.subscribe(() => {
-  //    this.UserListData =  this.AngularMaterialCommunicationService.getMyStateData()
-  //     console.log('dataaaaaaaaaaaaa', this.UserListData);
-  // });
+    dialogueRef.afterClosed()?.subscribe(() => {
+     this.UserListData =  this.AngularMaterialCommunicationService.getMyStateData()
+      console.log('dataaaaaaaaaaaaa', this.UserListData);
+  });
   }
 }

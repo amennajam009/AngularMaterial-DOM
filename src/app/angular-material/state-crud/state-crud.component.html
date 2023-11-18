@@ -19,14 +19,14 @@
            <th>Delete User</th>
          </tr>
          </thead>
-         <tbody class="text-light" *ngFor="let UserList of UserListData"><tr>
+         <tbody class="text-light" *ngFor="let UserList of UserListData; let i=index"><tr>
           <td>{{UserList.first_name}}</td>
           <td>{{UserList.last_name}}</td>
           <td>{{UserList.education}}</td>
           <td>{{UserList.city}}</td>
           <td>{{UserList.country}}</td>
           <td>{{UserList.pin_code}}</td>
-          <td class="update" (click)="UpdateStaff(UserList)">Update</td>
+          <td class="update" (click)="UpdateStaff(UserList , i)">Update</td>
           <td class="del" (click)="deleteUserData(UserList)">Delete</td>
          </tr>
           </tbody>

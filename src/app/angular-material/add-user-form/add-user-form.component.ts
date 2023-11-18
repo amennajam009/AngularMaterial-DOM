@@ -10,8 +10,10 @@ import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 })
 export class AddUserFormComponent {
   saveDataInState : any [] = []
+  index:any
   AngularMaterialForm: FormBuilder | any
   editData:any = null
+  indexNumber : number |any
 
 
   constructor(private _dialogue:MatDialog,
@@ -73,7 +75,13 @@ export class AddUserFormComponent {
     return payload
   }
 
-  setMyEditData(data:any){
+  setMyEditData(data:any ){
+    this.indexNumber = this.data.index
+    console.log(this.indexNumber)
+    console.log('myselected data',this.data)
+    // this.index = this.AngularMaterialCommunicationService.getMyStateData().indexOf(data)
+    // console.log('indexxxxxx',this.index)
+  
     this.AngularMaterialForm.patchValue({
       first_name: data?.first_name,
       last_name: data?.last_name,
@@ -102,7 +110,7 @@ export class AddUserFormComponent {
     }else{
       console.log('selecteddata',this.data)
       const formValues = this.MyPayLoad()
-      this.saveDataInState[this.data] = formValues
+      this.saveDataInState[this.indexNumber] = formValues
       console.log('hhhhh',this.data)
       console.log('Updated StateValues:', this.saveDataInState);
     }
