@@ -75,3 +75,7 @@ img {
     color: red;
     cursor: pointer;
 }
+.update{
+    color: green;
+    cursor: pointer;
+}

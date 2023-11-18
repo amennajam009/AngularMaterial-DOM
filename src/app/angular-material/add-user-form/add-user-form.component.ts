@@ -1,7 +1,7 @@
 import { AngularMaterialCommunicationService } from './../angular-material-communication.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-user-form',
@@ -11,18 +11,19 @@ import { MatDialog } from '@angular/material/dialog';
 export class AddUserFormComponent {
   saveDataInState : any [] = []
   AngularMaterialForm: FormBuilder | any
-
-
-
+  editData:any = null
 
 
   constructor(private _dialogue:MatDialog,
               private FormBuilder:FormBuilder,
-              private AngularMaterialCommunicationService:AngularMaterialCommunicationService) { 
+              private AngularMaterialCommunicationService:AngularMaterialCommunicationService,
+              @Inject(MAT_DIALOG_DATA) public data: any) { 
+                this.editData = this.data? this.data.EditData : null;
                 this.UserFormModel()
   }
   
   ngOnInit(): void {
+  console.log('dataToGettt',this.editData)
   }
 
 

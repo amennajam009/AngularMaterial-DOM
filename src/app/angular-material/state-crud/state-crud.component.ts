@@ -38,6 +38,19 @@ const dialogueRef =  this._dialogue.open(AddUserFormComponent)
 deleteUserData(i:any){
   console.log('idex',i)
   this.UserListData.splice(i,1)
-
 }
+
+
+UpdateStaff(data:object){
+  const dialogueRef =  this._dialogue.open(AddUserFormComponent , {
+    data:{
+      EditData:data
+    }
+  })
+  
+  //   dialogueRef.afterClosed()?.subscribe(() => {
+  //    this.UserListData =  this.AngularMaterialCommunicationService.getMyStateData()
+  //     console.log('dataaaaaaaaaaaaa', this.UserListData);
+  // });
+  }
 }

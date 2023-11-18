@@ -15,13 +15,8 @@
            <th>City</th>
            <th>County</th>
            <th>PinCode</th>
+           <th>Update User</th>
            <th>Delete User</th>
-           <!-- <th>Photo</th>
-           <th>Product ID</th>
-           <th>Status</th>
-           <th>BUDGET</th>
-           <th>Date</th>
-           <th>COMPLETION</th> -->
          </tr>
          </thead>
          <tbody class="text-light" *ngFor="let UserList of UserListData"><tr>
@@ -31,17 +26,8 @@
           <td>{{UserList.city}}</td>
           <td>{{UserList.country}}</td>
           <td>{{UserList.pin_code}}</td>
+          <td class="update" (click)="UpdateStaff(UserList)">Update</td>
           <td class="del" (click)="deleteUserData(UserList)">Delete</td>
-
-          <!-- <td><img src="../../../assets/assets/angular.jpg" class="product-img-2 w-40 h-40" alt="product img"></td>
-          <td>#9405822</td>
-          <td><span class="badge bg-light-success text-success w-100">Paid</span></td>
-          <td>$1250.00</td>
-          <td>03 Feb 2020</td>
-          <td><div class="progress" style="height: 5px;">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
-            </div>
-          </td> -->
          </tr>
           </tbody>
         </table>
