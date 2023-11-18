@@ -13,7 +13,7 @@ export class Form2Component {
 
   ngOnInit(): void {
   //  console.log(this.secondComponent)
-   console.log('form222222Data',this.MyTestingData)
+  //  console.log('form222222Data',this.MyTestingData)
   }
 
 }

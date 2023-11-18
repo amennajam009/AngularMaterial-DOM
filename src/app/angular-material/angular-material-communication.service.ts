@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AngularMaterialCommunicationService {
  private dataToSend = '';
+ private saveStateData = '';
   
   constructor() { }
 
@@ -15,5 +16,13 @@ export class AngularMaterialCommunicationService {
 
   getSavedVariablesData(){
     return this.dataToSend
+  }
+
+  saveMyStateData(data:any){
+    return this.saveStateData = data;
+  }
+
+  getMyStateData(){
+    return this.saveStateData
   }
 }

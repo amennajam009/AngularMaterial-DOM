@@ -1,3 +1,4 @@
+import { AngularMaterialCommunicationService } from './../angular-material-communication.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -16,7 +17,8 @@ export class AddUserFormComponent {
 
 
   constructor(private _dialogue:MatDialog,
-              private FormBuilder:FormBuilder) { 
+              private FormBuilder:FormBuilder,
+              private AngularMaterialCommunicationService:AngularMaterialCommunicationService) { 
                 this.UserFormModel()
   }
   
@@ -70,13 +72,15 @@ export class AddUserFormComponent {
   Submit(){
     const formValues = this.MyPayLoad()
     this.saveDataInState.push(formValues)
+    this.AngularMaterialCommunicationService.saveMyStateData(this.saveDataInState)
     console.log('storingDataInState' , this.saveDataInState)
     console.log('myFormValues',formValues)
   }
 
   close(){
+    this.AngularMaterialCommunicationService.getMyStateData()
     this._dialogue.closeAll()
   }
 
-  
+
 }
