@@ -18,7 +18,7 @@ constructor(private FormBuilder:FormBuilder,
 }
 
 ngOnInit(): void {
-
+this.getSavedVariablesData()
 }
 
 userFromModel(){
@@ -37,6 +37,12 @@ userFromModel(){
   })
 }
 
+
+getSavedVariablesData(){
+  this.bootStrapService.getSavedVariablesData().subscribe((res:any)=>{
+    res
+  })
+}
 Submit(){
 const CreateUserData = this.UserFrom.value;
 this.bootStrapService.createUserData(CreateUserData).subscribe((res:any)=>{

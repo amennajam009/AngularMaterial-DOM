@@ -54,4 +54,10 @@ export class BootstrapServiceService {
   }
 
 
+  //get data
+  getSavedVariablesData(){
+    return this.HttpClient.get('http://localhost:8080/saveVariableData/getSelectedVariable')
+  }
+
+
 }
