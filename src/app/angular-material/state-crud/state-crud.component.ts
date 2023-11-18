@@ -10,7 +10,7 @@ import { AddUserFormComponent } from '../add-user-form/add-user-form.component';
   styleUrls: ['./state-crud.component.css']
 })
 export class StateCrudComponent {
-  UserList: string | undefined;
+  UserListData: any
   constructor(private _dialogue:MatDialog,
               private AngularMaterialCommunicationService:AngularMaterialCommunicationService) { 
 }
@@ -29,8 +29,8 @@ openAddStaff(){
 const dialogueRef =  this._dialogue.open(AddUserFormComponent)
 
   dialogueRef.afterClosed()?.subscribe(() => {
-   this.UserList =  this.AngularMaterialCommunicationService.getMyStateData()
-    console.log('dataaaaaaaaaaaaa', this.UserList);
+   this.UserListData =  this.AngularMaterialCommunicationService.getMyStateData()
+    console.log('dataaaaaaaaaaaaa', this.UserListData);
 
 });
 
