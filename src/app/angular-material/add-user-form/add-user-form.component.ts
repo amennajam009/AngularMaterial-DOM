@@ -8,7 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./add-user-form.component.css']
 })
 export class AddUserFormComponent {
-
+  saveDataInState : any [] = []
   AngularMaterialForm: FormBuilder | any
 
 
@@ -69,6 +69,8 @@ export class AddUserFormComponent {
 
   Submit(){
     const formValues = this.MyPayLoad()
+    this.saveDataInState.push(formValues)
+    console.log('storingDataInState' , this.saveDataInState)
     console.log('myFormValues',formValues)
   }
 
