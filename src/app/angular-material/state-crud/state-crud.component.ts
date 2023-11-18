@@ -14,13 +14,14 @@ export interface UserData {
   styleUrls: ['./state-crud.component.css']
 })
 export class StateCrudComponent {
+  UserList: string | undefined;
   constructor(private _dialogue:MatDialog,
               private AngularMaterialCommunicationService:AngularMaterialCommunicationService) { 
 }
 
 ngOnInit(): void {
 
-  console.log('dataaaaaaaaaaaaa',this.AngularMaterialCommunicationService.getMyStateData())
+  // console.log('dataaaaaaaaaaaaa',this.AngularMaterialCommunicationService.getMyStateData())
 }
 
 displayedColumns: string[] = ['id', 'name', 'progress'];
@@ -29,13 +30,15 @@ dataSource: UserData[] = [
   { id: 2, name: 'Doe', progress: '40%' },
   { id: 3, name: 'Smith', progress: '60%' },
 ];
+
+
+
 openAddStaff(){
 const dialogueRef =  this._dialogue.open(AddUserFormComponent)
 
   dialogueRef.afterClosed()?.subscribe(() => {
-
-    // The dialog was closed with a result (assuming it's the data you need)
-    console.log('dataaaaaaaaaaaaa', this.AngularMaterialCommunicationService.getMyStateData());
+   this.UserList =  this.AngularMaterialCommunicationService.getMyStateData()
+    console.log('dataaaaaaaaaaaaa', this.UserList);
 
 });
 

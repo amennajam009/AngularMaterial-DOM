@@ -1,28 +1,121 @@
 <button class="btn btn-primary" (click)="openAddStaff()">Add User</button>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="card mt-5 text-light" style="background-color: #172b4d;">
+  <div class="card-body">
+    <div class="d-flex align-items-center">
+       <h5 class="mb-0">Dark Table</h5>
+    </div>
+    <div class="table-responsive mt-3">
+      <table class="table align-middle mb-0">
+        <thead class="table" style="background-color: #172b4d;">
+         <tr class="tablerow">
+           <th>Project</th>
+           <th>Photo</th>
+           <th>Product ID</th>
+           <th>Status</th>
+           <th>BUDGET</th>
+           <th>Date</th>
+           <th>COMPLETION</th>
+         </tr>
+         </thead>
+         <tbody class="text-light"><tr>
+          <td>Argon Design System</td>
+          <td><img src="../../../assets/assets/angular.jpg" class="product-img-2 w-40 h-40" alt="product img"></td>
+          <td>#9405822</td>
+          <td><span class="badge bg-light-success text-success w-100">Paid</span></td>
+          <td>$1250.00</td>
+          <td>03 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+            </div>
+          </td>
+         </tr>
 
-    <!-- ID Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>ID</th>
-      <td mat-cell *matCellDef="let element">{{element.id}}</td>
-    </ng-container>
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{element.name}}</td>
-    </ng-container>
-  
-    <!-- Progress Column -->
-    <ng-container matColumnDef="progress">
-      <th mat-header-cell *matHeaderCellDef>Progress</th>
-      <td mat-cell *matCellDef="let element">{{element.progress}}</td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+         <tr>
+          <td>Angular Now UI Kit PRO</td>
+          <td><img src="../../../assets/assets/bootstrap.jpg" class="product-img-2" alt="product img"></td>
+          <td>#8304620</td>
+          <td><span class="badge bg-light-warning text-warning w-100">Pending</span></td>
+          <td>$1500.00</td>
+          <td>05 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+            </div></td>
+         </tr>
+
+         <tr>
+          <td>Black Dashboard</td>
+          <td><img src="../../../assets/assets/vue.jpg" class="product-img-2" alt="product img"></td>
+          <td>#4736890</td>
+          <td><span class="badge bg-light-danger text-danger w-100">Failed</span></td>
+          <td>$1400.00</td>
+          <td>06 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 70%"></div>
+            </div></td>
+         </tr>
+
+         <tr>
+          <td>React Material Dashboard</td>
+          <td><img src="../../../assets/assets/react.jpg" class="product-img-2" alt="product img"></td>
+          <td>#8543765</td>
+          <td><span class="badge bg-light-success text-success w-100">Paid</span></td>
+          <td>$1200.00</td>
+          <td>14 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+            </div></td>
+         </tr>
+         <tr>
+          <td>Vue Paper UI Kit PRO</td>
+          <td><img src="../../../assets/assets/sketch.jpg" class="product-img-2" alt="product img"></td>
+          <td>#9629240</td>
+          <td><span class="badge bg-light-warning text-warning w-100">Pending</span></td>
+          <td>$1500.00</td>
+          <td>18 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+            </div></td>
+         </tr>
+         <tr>
+          <td>Argon Design System</td>
+          <td><img src="../../../assets/assets/vue (1).jpg" class="product-img-2" alt="product img"></td>
+          <td>#8506790</td>
+          <td><span class="badge bg-light-danger text-danger w-100">Failed</span></td>
+          <td>$1800.00</td>
+          <td>21 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 40%"></div>
+            </div></td>
+         </tr>
+         <tr>
+          <td>Vue Paper UI Kit PRO</td>
+          <td><img src="../../../assets/assets/sketch.jpg" class="product-img-2" alt="product img"></td>
+          <td>#9629240</td>
+          <td><span class="badge bg-light-warning text-warning w-100">Pending</span></td>
+          <td>$1500.00</td>
+          <td>18 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+            </div></td>
+         </tr>
+         <tr>
+          <td>Argon Design System</td>
+          <td><img src="../../../assets/assets/angular.jpg" class="product-img-2 w-40 h-40" alt="product img"></td>
+          <td>#9405822</td>
+          <td><span class="badge bg-light-success text-success w-100">Paid</span></td>
+          <td>$1250.00</td>
+          <td>03 Feb 2020</td>
+          <td><div class="progress" style="height: 5px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"></div>
+            </div>
+          </td>
+         </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
   
   
   

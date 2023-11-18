@@ -1,0 +1,73 @@
+.widget-icon {
+    width: 48px;
+    height: 48px;
+    background-image: linear-gradient(to right, #de3a3a, #d72f2f ,#ef5f3b,#e8381d);
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.widget-icon-2 {
+    width: 48px;
+    height: 48px;
+    background-image: linear-gradient(to right,rgb(184, 242, 240), rgb(97, 213, 209) ,rgb(37, 237, 231),rgb(8, 118, 202));
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.widget-icon-3{
+    width: 48px;
+    height: 48px;
+    background-image: linear-gradient(to right,rgb(184, 242, 240) ,rgb(51, 113, 247),rgb(18, 146, 244));
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.widget-icon-4{
+    width: 48px;
+    height: 48px;
+    background-image: linear-gradient(to right, #39bd72 ,#6dd59a,#25bab2 ,#28cfc7,#24fff4);
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.widget-icon-5{
+    width: 48px;
+    height: 48px;
+    background-image: linear-gradient(to right, #c86533 ,#da6826,#b86419 ,#c26a1e,#f09b1b);
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.card{
+    border-radius: 8px;
+}
+img {
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%;
+}
+
+.Mytables{
+    margin-top: 15%;
+}
+.tablerow{
+    color: #4d7bca;
+}
