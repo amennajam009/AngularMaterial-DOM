@@ -19,6 +19,7 @@ ngOnInit(): void {
 
 }
 
+//Not working 
 MyUserList(){
   this.AngularMaterialCommunicationService.getMyStateData()
 }
@@ -31,8 +32,12 @@ const dialogueRef =  this._dialogue.open(AddUserFormComponent)
   dialogueRef.afterClosed()?.subscribe(() => {
    this.UserListData =  this.AngularMaterialCommunicationService.getMyStateData()
     console.log('dataaaaaaaaaaaaa', this.UserListData);
-
 });
+}
+
+deleteUserData(i:any){
+  console.log('idex',i)
+  this.UserListData.splice(i,1)
 
 }
 }

@@ -71,3 +71,7 @@ img {
 .tablerow{
     color: #4d7bca;
 }
+.del{
+    color: red;
+    cursor: pointer;
+}

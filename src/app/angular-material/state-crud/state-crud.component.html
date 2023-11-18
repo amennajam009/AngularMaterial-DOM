@@ -15,6 +15,7 @@
            <th>City</th>
            <th>County</th>
            <th>PinCode</th>
+           <th>Delete User</th>
            <!-- <th>Photo</th>
            <th>Product ID</th>
            <th>Status</th>
@@ -30,6 +31,8 @@
           <td>{{UserList.city}}</td>
           <td>{{UserList.country}}</td>
           <td>{{UserList.pin_code}}</td>
+          <td class="del" (click)="deleteUserData(UserList)">Delete</td>
+
           <!-- <td><img src="../../../assets/assets/angular.jpg" class="product-img-2 w-40 h-40" alt="product img"></td>
           <td>#9405822</td>
           <td><span class="badge bg-light-success text-success w-100">Paid</span></td>
