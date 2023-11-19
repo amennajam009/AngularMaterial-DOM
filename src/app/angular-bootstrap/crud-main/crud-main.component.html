@@ -1,85 +1,4 @@
-<!-- <div class="col-lg-8">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="card radius-10 Formcard">
-          <div class="card-body">
-            <form [formGroup]="UserFrom" (ngSubmit)="Submit()">
-
-                <h6 class="mb-0 mt-4 text-secondary">USER INFORMATION</h6>
-                <hr>
-                <div class="row g-3">
-                  <div class="col-6">
-                     <label class="form-label text-secondary">Username</label>
-                     <input type="text" class="form-control"  formControlName="name">
-                  </div>
-                  <div class="col-6">
-                   <label class="form-label text-secondary">Email address</label>
-                   <input type="text" class="form-control" formControlName="email" >
-                 </div>
-                   <div class="col-6">
-                     <label class="form-label text-secondary">First Name</label>
-                     <input type="text" class="form-control"  formControlName="first_name">
-                 </div>
-                 <div class="col-6">
-                     <label class="form-label text-secondary">Last Name</label>
-                     <input type="text" class="form-control" formControlName="last_name">
-                 </div>
-                 <div class="col-6">
-                 <select formControlName="select1"  class="form-control" >
-                    <option>option-1</option>
-                    <option>option-2</option>
-                    <option>option-3</option>
-                    <option>option-4</option>
-                    <option>option-5</option>
-                </select>
-                 </div>
-                 <div class="col-6">
-                    <select formControlName="select2"  class="form-control" >
-                        <option>option-1</option>
-                        <option>option-2</option>
-                        <option>option-3</option>
-                        <option>option-4</option>
-                        <option>option-5</option>
-                   </select>
-                    </div>
-               </div>
-               <h6 class="mb-0 mt-4 text-secondary">Contact Information</h6>
-               <hr>
-               <div class="row g-3">
-                <div class="col-12">
-                  <label class="form-label text-secondary">Address</label>
-                  <input type="text" class="form-control" formControlName="address">
-                 </div>
-                 <div class="col-6">
-                    <label class="form-label text-secondary">City</label>
-                    <input type="text" class="form-control" formControlName="city">
-                 </div>
-                 <div class="col-6">
-                  <label class="form-label text-secondary">Country</label>
-                  <input type="text" class="form-control" formControlName="country">
-                </div>
-                  <div class="col-6">
-                    <label class="form-label text-secondary">Pin Code</label>
-                    <input type="text" class="form-control" formControlName="pin_code">
-                </div>
-                <div class="col-6">
-                    <label class="form-label text-secondary">Last Name</label>
-                    <input type="text" class="form-control" formControlName="last_name">
-                </div>
-                <div class="col-12">
-                  <label class="form-label text-secondary">About Me</label>
-                  <textarea class="form-control" rows="4" cols="4" placeholder="Describe yourself..." formControlName="about_me"></textarea>
-                 </div>
-                </div>
-                <div class="text-start mt-3">
-                  <button type="submit" class="btn px-4" style="background-color: #2ea963;color:white">Save Changes</button>
-                </div>
-                </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+<!-- 
 
   <h1 class="text-center mt-4">USER - LISTING !</h1>
   <h4 class="text-center mt-4">User-<span style="color:#FFB000 ;">Data</span>-Analytics</h4>
@@ -87,24 +6,108 @@
       <thead class="text-dark">
         <tr>
           <th class="text-center">#</th>
-          <th class="text-center">first_name</th>
-          <th class="text-center">last_name</th>
-          <th class="text-center">country</th>
-          <th class="text-center">pin_code</th>
+          <th class="text-center">Variable 1</th>
+          <th class="text-center">Variable 2</th>
+          <th class="text-center">Variable 3</th>
+          <th class="text-center">Variable 4</th>
           <th class="text-center" colspan="2">Actions</th>
   
         </tr>
       </thead>
       <tbody class="text-dark">
-        <tr >
-          <th class="text-center"></th>
-          <td class="text-center text-dark"></td>
-          <td class="text-center"></td>
-          <td class="text-center" ></td>
-          <td class="text-center"></td>
+        <tr *ngFor="let data of  variablesDataList ; let i=index" >
+          <th class="text-center">{{i+1}}</th>
+          <td class="text-center text-dark">{{data.variable1}}</td>
+          <td class="text-center">{{data.variable2}}</td>
+          <td class="text-center" >{{data.variable3}}</td>
+          <td class="text-center">{{data.variable4}}</td>
           <td ><i class="fa fa-pencil text-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" ></i></td>
       
           <td class="text-center"><button class="btn btn-outline-danger" >Hard Delete</button></td>
         </tr>
       </tbody>
     </table>
+
+
+
+
+      
+  <form >
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Banner Image</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="mb-0">Edit Profile</h6>
+                  <button class="btn settingbtn">Settings</button>
+                </div>
+              <h6 class="mb-0 mt-4 text-secondary">USER INFORMATION</h6>
+              <hr>
+              <div class="row g-3">
+                <h3> Variable 1</h3>
+                <select formControlName="variable1"  class="form-control" placeholder="seelct" >
+                  <option disabled>Select Website</option>
+                  <option *ngFor="let data of variabledata?.variable1">{{data.variable}}</option>
+              </select>
+
+              <h3> Variable 2</h3>
+              <select formControlName="variable2"  class="form-control" >
+                <option *ngFor="let data of variabledata?.variable2">{{data.variable}}</option>
+            </select>
+
+            <h3> Variable 3</h3>
+            <select formControlName="variable3"  class="form-control" >
+              <option *ngFor="let data of variabledata?.variable3">{{data.variable}}</option>
+          </select>
+            
+          <h3> Variable 4</h3>
+          <select formControlName="variable4"  class="form-control" >
+            <option *ngFor="let data of variabledata?.variable4">{{data.variable}}</option>
+        </select>
+
+        <h3> Variable 5</h3>
+        <select formControlName="variable5"  class="form-control" >
+          <option *ngFor="let data of variabledata?.variable5">{{data.variable}}</option>
+      </select>
+
+
+      <h3> Variable 6</h3>
+      <select formControlName="variable6"  class="form-control" >
+        <option *ngFor="let data of variabledata?.variable6">{{data.variable}}</option>
+    </select>
+
+
+    <h3> Variable 7</h3>
+    <select formControlName="variable7"  class="form-control" >
+      <option *ngFor="let data of variabledata?.variable7">{{data.variable}}</option>
+  </select>
+
+     
+
+  <h3> Variable 8</h3>
+  <select formControlName="variable8"  class="form-control" >
+    <option *ngFor="let data of variabledata?.variable8">{{data.variable}}</option>
+</select>
+
+ 
+<h3> Variable 9</h3>
+<select formControlName="variable9"  class="form-control" >
+  <option *ngFor="let data of variabledata?.variable9">{{data.variable}}</option>
+</select>
+             </div>
+
+              <button class="btn btn-success">Submit Form</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Update changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form> -->
+  

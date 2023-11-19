@@ -10,6 +10,7 @@ import { BootstrapServiceService } from '../shared/bootstrap-service.service';
 export class CRUDMainComponent {
 
   UserFrom: FormBuilder | any
+  variablesDataList: any [] = []
 
 
 constructor(private FormBuilder:FormBuilder,
@@ -40,7 +41,8 @@ userFromModel(){
 
 getSavedVariablesData(){
   this.bootStrapService.getSavedVariablesData().subscribe((res:any)=>{
-    res
+  this.variablesDataList =  res?.data
+  console.log('dataaaaaa',this.variablesDataList)
   })
 }
 Submit(){
