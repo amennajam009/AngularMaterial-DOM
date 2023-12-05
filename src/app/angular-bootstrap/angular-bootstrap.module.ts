@@ -15,6 +15,7 @@ import { ChangeColorElDirective } from './shared/change-color-el.directive';
 import { DirectiveDirective } from './shared/directives/directive.directive';
 import { DirectiveComponent } from './directive/directive.component';
 import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
+import { StructuralDirectiveComponent } from './types-of-directives/structural-directive/structural-directive.component';
 
 
 
@@ -33,6 +34,7 @@ import { ComponentDirectiveComponent } from './types-of-directives/component-dir
     DirectiveDirective,
     DirectiveComponent,
     ComponentDirectiveComponent,
+    StructuralDirectiveComponent,
 
 
   ],
