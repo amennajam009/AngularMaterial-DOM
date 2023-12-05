@@ -12,6 +12,9 @@ import { CRUDMainComponent } from './crud-main/crud-main.component';
 import { CrudListingComponent } from './crud-listing/crud-listing.component';
 import { StateCrudComponent } from './state-crud/state-crud.component';
 import { ChangeColorElDirective } from './shared/change-color-el.directive';
+import { DirectiveDirective } from './shared/directives/directive.directive';
+import { DirectiveComponent } from './directive/directive.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { ChangeColorElDirective } from './shared/change-color-el.directive';
     CrudListingComponent,
     StateCrudComponent,
     ChangeColorElDirective,
+    DirectiveDirective,
+    DirectiveComponent,
   ],
   imports: [
     CommonModule,
