@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
     <h2 class="text-center">
       You must be wondering i'm using html template file right? bruhh 💀
     </h2>
+    <div class="dog_meme">
+    <img  src="../assets/pic/meme dog.png"   />
+    </div>
     <h2 class="text-center">Go check Component directive.ts file</h2>
     <h3 class="mt-5 text-center">
       Now here if you can see i comment out the templateUrl which actually bind
