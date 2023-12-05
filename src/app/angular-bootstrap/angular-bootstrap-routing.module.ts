@@ -23,6 +23,7 @@ children:[
   {path:'directive', component:DirectiveComponent},
   {path:'component-directive',component:ComponentDirectiveComponent},
   {path:'structural-directive',component:StructuralDirectiveComponent},
+  // {path:'attribute-directive',component:AttributeDirectiveComponent},
   {path:'attribute-directive',component:AttributeDirectiveComponent}
 
 
