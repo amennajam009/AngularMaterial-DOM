@@ -16,6 +16,7 @@ import { DirectiveDirective } from './shared/directives/directive.directive';
 import { DirectiveComponent } from './directive/directive.component';
 
 
+
 @NgModule({
   declarations: [
     AngularBootstrapComponent,
@@ -29,6 +30,7 @@ import { DirectiveComponent } from './directive/directive.component';
     ChangeColorElDirective,
     DirectiveDirective,
     DirectiveComponent,
+
   ],
   imports: [
     CommonModule,

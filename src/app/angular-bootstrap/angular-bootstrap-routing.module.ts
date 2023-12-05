@@ -16,7 +16,7 @@ children:[
   {path:'crud-main', component:CRUDMainComponent},
   {path:'crud-listing', component:CrudListingComponent},
   {path:'state-crud', component:StateCrudComponent},
-  {path:'directive', component:DirectiveComponent}
+  {path:'directive', component:DirectiveComponent},
 
   
 
