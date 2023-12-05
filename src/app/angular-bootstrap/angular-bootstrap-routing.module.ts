@@ -7,6 +7,8 @@ import { CRUDMainComponent } from './crud-main/crud-main.component';
 import { CrudListingComponent } from './crud-listing/crud-listing.component';
 import { StateCrudComponent } from './state-crud/state-crud.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
+
 
 const routes: Routes = [{ path: '', component: AngularBootstrapComponent,
 children:[
@@ -17,8 +19,7 @@ children:[
   {path:'crud-listing', component:CrudListingComponent},
   {path:'state-crud', component:StateCrudComponent},
   {path:'directive', component:DirectiveComponent},
-
-  
+  {path:'component-directive',component:ComponentDirectiveComponent}
 
 
 

@@ -14,6 +14,8 @@ import { StateCrudComponent } from './state-crud/state-crud.component';
 import { ChangeColorElDirective } from './shared/change-color-el.directive';
 import { DirectiveDirective } from './shared/directives/directive.directive';
 import { DirectiveComponent } from './directive/directive.component';
+import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
+
 
 
 
@@ -30,6 +32,8 @@ import { DirectiveComponent } from './directive/directive.component';
     ChangeColorElDirective,
     DirectiveDirective,
     DirectiveComponent,
+    ComponentDirectiveComponent,
+
 
   ],
   imports: [
