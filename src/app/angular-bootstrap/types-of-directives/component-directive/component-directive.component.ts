@@ -19,6 +19,11 @@ import { Component } from '@angular/core';
       is our decorator which has metadata in which it gives us
       selector,template,style
     </h3>`,
-  styleUrls: ['./component-directive.component.css'],
+  styles: [`
+  .dog_meme{
+    display:flex;
+    justify-content:center;
+    align-items:center
+  }`],
 })
 export class ComponentDirectiveComponent {}
