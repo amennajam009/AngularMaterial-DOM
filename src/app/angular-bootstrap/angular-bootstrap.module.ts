@@ -1,6 +1,6 @@
+import { StructuralDirectiveDirective } from './shared/directives/structual-directive.directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AngularBootstrapRoutingModule } from './angular-bootstrap-routing.module';
 import { AngularBootstrapComponent } from './angular-bootstrap.component';
 import { HomeComponent } from './home/home.component';
@@ -12,10 +12,8 @@ import { CRUDMainComponent } from './crud-main/crud-main.component';
 import { CrudListingComponent } from './crud-listing/crud-listing.component';
 import { StateCrudComponent } from './state-crud/state-crud.component';
 import { ChangeColorElDirective } from './shared/change-color-el.directive';
-import { DirectiveDirective } from './shared/directives/directive.directive';
 import { DirectiveComponent } from './directive/directive.component';
 import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
-import { StructuralDirectiveComponent } from './types-of-directives/structural-directive/structural-directive.component';
 
 
 
@@ -31,11 +29,9 @@ import { StructuralDirectiveComponent } from './types-of-directives/structural-d
     CrudListingComponent,
     StateCrudComponent,
     ChangeColorElDirective,
-    DirectiveDirective,
     DirectiveComponent,
     ComponentDirectiveComponent,
-    StructuralDirectiveComponent,
-
+    StructuralDirectiveDirective,
 
   ],
   imports: [
@@ -43,6 +39,7 @@ import { StructuralDirectiveComponent } from './types-of-directives/structural-d
     AngularBootstrapRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    
   ]
 })
 export class AngularBootstrapModule { }
