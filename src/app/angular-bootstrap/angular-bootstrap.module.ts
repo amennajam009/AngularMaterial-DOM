@@ -14,6 +14,8 @@ import { StateCrudComponent } from './state-crud/state-crud.component';
 import { ChangeColorElDirective } from './shared/change-color-el.directive';
 import { DirectiveComponent } from './directive/directive.component';
 import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
+import { AttributiveDirectiveDirective } from './shared/directives/attributive-directive.directive';
+import { AttributeDirectiveComponent } from './types-of-directive/attribute-directive/attribute-directive.component';
 
 
 
@@ -32,6 +34,8 @@ import { ComponentDirectiveComponent } from './types-of-directives/component-dir
     DirectiveComponent,
     ComponentDirectiveComponent,
     StructuralDirectiveDirective,
+    AttributiveDirectiveDirective,
+    AttributeDirectiveComponent,
 
   ],
   imports: [
