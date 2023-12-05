@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
   .dog_meme{
     display:flex;
     justify-content:center;
-    align-items:center
+    align-items:center;
   }`],
 })
 export class ComponentDirectiveComponent {}
