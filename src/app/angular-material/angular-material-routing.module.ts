@@ -4,6 +4,7 @@ import { AngularMaterialComponent } from './angular-material.component';
 import { HomeComponent } from './home/home.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { StateCrudComponent } from './state-crud/state-crud.component';
+import { APIComponent } from './api/api.component';
 
 const routes: Routes = [
   { path: '', component: AngularMaterialComponent,
@@ -11,7 +12,8 @@ const routes: Routes = [
     {path:'', component:MainPageComponent},
     {path:'home', component:HomeComponent},
     {path:'main-page' , component:MainPageComponent},
-    {path:'state-crud', component:StateCrudComponent}
+    {path:'state-crud', component:StateCrudComponent},
+    {path:'api',component:APIComponent}
     
 
   
