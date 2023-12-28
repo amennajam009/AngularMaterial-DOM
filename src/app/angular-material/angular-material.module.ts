@@ -21,6 +21,7 @@ import { StateCrudComponent } from './state-crud/state-crud.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import {MatTableModule} from '@angular/material/table';
+import { APIComponent } from './api/api.component';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -34,7 +35,8 @@ import {MatTableModule} from '@angular/material/table';
     LayoutComponent,
     MainPageComponent,
     StateCrudComponent,
-    AddUserFormComponent
+    AddUserFormComponent,
+    APIComponent
   ],
   imports: [
     CommonModule,
