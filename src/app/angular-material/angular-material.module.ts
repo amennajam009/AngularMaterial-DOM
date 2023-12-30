@@ -23,6 +23,10 @@ import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import {MatTableModule} from '@angular/material/table';
 import { APIComponent } from './api/api.component';
 import { AddEditApiComponent } from './add-edit-api/add-edit-api.component';
+import {
+  MatSlideToggleModule,
+  // _MatSlideToggleRequiredValidatorModule,
+} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -51,6 +55,7 @@ import { AddEditApiComponent } from './add-edit-api/add-edit-api.component';
     MatTableModule,
     ReactiveFormsModule,
     FormsModule,
+    MatSlideToggleModule
   ]
 })
 export class AngularMaterialModule { }

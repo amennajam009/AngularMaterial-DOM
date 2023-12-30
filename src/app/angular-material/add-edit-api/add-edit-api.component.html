@@ -2,4 +2,23 @@
     <div class="d-flex justify-content-end">
     <button class="btn btn-danger btn-sm me-4 mt-2" (click)="close()">close</button>
 </div>
+<div class="row g-3" [formGroup]="userCreate">
+    <h2 class="ms-3">User Create</h2>
+    <div class="col-12">
+        <label class="form-label text-secondary">First Name</label>
+        <input type="text" class="form-control"  formControlName="first_name">
+    </div>
+    <div class="col-12">
+        <label class="form-label text-secondary">Last Name</label>
+        <input type="text" class="form-control" formControlName="last_name">
+    </div>
+    <mat-slide-toggle
+    formControlName="status"
+  >
+  </mat-slide-toggle>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-success mt-5 w-50">Create</button>
+    </div>
+</div>
+
 </ng-container>
