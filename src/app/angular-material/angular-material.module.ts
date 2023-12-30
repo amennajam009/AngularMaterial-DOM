@@ -22,6 +22,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import {MatTableModule} from '@angular/material/table';
 import { APIComponent } from './api/api.component';
+import { AddEditApiComponent } from './add-edit-api/add-edit-api.component';
 @NgModule({
   declarations: [
     AngularMaterialComponent,
@@ -36,7 +37,8 @@ import { APIComponent } from './api/api.component';
     MainPageComponent,
     StateCrudComponent,
     AddUserFormComponent,
-    APIComponent
+    APIComponent,
+    AddEditApiComponent
   ],
   imports: [
     CommonModule,
