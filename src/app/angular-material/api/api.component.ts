@@ -24,7 +24,8 @@ export class APIComponent {
 
    addUser(){
     this._dialogue.open(AddEditApiComponent , {
-    
+    width:'500px',
+    height:'600px'
     })
    }
 
