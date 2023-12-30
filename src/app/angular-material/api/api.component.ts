@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditApiComponent } from '../add-edit-api/add-edit-api.component';
+import { MaterialServiceService } from '../shared/material-service.service';
 
 @Component({
   selector: 'app-api',
@@ -9,8 +10,10 @@ import { AddEditApiComponent } from '../add-edit-api/add-edit-api.component';
 })
 export class APIComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  userData: any;
 
-   constructor(private _dialogue:MatDialog,){
+   constructor(private _dialogue:MatDialog,
+               private angularService:MaterialServiceService){
    }
 
    dataSource: any[] = [
@@ -20,6 +23,7 @@ export class APIComponent {
   ];
 
    ngOnInit(): void {
+    this.getUserData()
    }
 
    addUser(){
@@ -29,5 +33,13 @@ export class APIComponent {
     })
    }
 
-   
+   //get User Data
+
+   getUserData(){
+    this.angularService.getUserData().subscribe((res:any)=>{
+      res
+      this.userData = res?.data
+      console.log('userrrrrrrrr',this.userData)
+    })
+   }
 }
