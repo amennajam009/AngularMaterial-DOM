@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl,  Validators } from '@angular/forms';
+import { FormBuilder, FormControl,  FormGroup,  Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MaterialServiceService } from '../shared/material-service.service';
 
@@ -9,7 +9,7 @@ import { MaterialServiceService } from '../shared/material-service.service';
   styleUrls: ['./add-edit-api.component.css']
 })
 export class AddEditApiComponent {
-userCreate:FormBuilder | any
+userCreate:FormGroup | any
 
   constructor(private _dialogue:MatDialog,
               private formBuilder:FormBuilder,
@@ -24,13 +24,18 @@ userCreate:FormBuilder | any
 
   userFormModel(){
     this.userCreate = this.formBuilder.group({
-      first_name: new FormControl ('',[Validators.required,]),
-      last_name: new FormControl ('',[Validators.required,]),
-      status_id: new FormControl ('',[Validators.required,]),
+      first_name: new FormControl ('',[Validators.required]),
+      last_name: new FormControl ('',[Validators.required]),
+      status_id: new FormControl ('',[Validators.required]),
     })
   }
 
   getFormData(){
+    if (this.userCreate.invalid) {
+      console.log('if is working')
+      this.touchFormControls()
+      return;
+    }
     const formValues = this.userCreate.value;
      const payLoad = {
        first_name:formValues?.first_name,
@@ -38,6 +43,12 @@ userCreate:FormBuilder | any
        status_id: formValues?.status_id ? 1 : 0
      }
      return payLoad
+  }
+
+  touchFormControls() {
+    Object.keys(this.userCreate.controls).forEach(key => {
+      this.userCreate.get(key)?.markAsTouched();
+    });
   }
 
   saveFormData(){

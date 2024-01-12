@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditApiComponent } from '../add-edit-api/add-edit-api.component';
 import { MaterialServiceService } from '../shared/material-service.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-api',
@@ -13,7 +14,8 @@ export class APIComponent {
   userData: any;
 
    constructor(private _dialogue:MatDialog,
-               private angularService:MaterialServiceService){
+               private angularService:MaterialServiceService,
+               private setTitle:Title){
    }
 
    dataSource: any[] = [
@@ -24,6 +26,7 @@ export class APIComponent {
 
    ngOnInit(): void {
     this.getUserData()
+    this.setTitle.setTitle('Api Practice')
    }
 
    addUser(){
