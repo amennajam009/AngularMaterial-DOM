@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditApiComponent } from '../add-edit-api/add-edit-api.component';
 import { MaterialServiceService } from '../shared/material-service.service';
 import { Title } from '@angular/platform-browser';
-
+declare var paypal: any; 
 @Component({
   selector: 'app-api',
   templateUrl: './api.component.html',
@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
 export class APIComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   userData: any;
-
+  @ViewChild('paymentRef',{static: true}) paymentRef!:ElementRef
    constructor(private _dialogue:MatDialog,
                private angularService:MaterialServiceService,
                private setTitle:Title){
@@ -27,6 +27,8 @@ export class APIComponent {
    ngOnInit(): void {
     this.getUserData()
     this.setTitle.setTitle('Api Practice')
+    console.log(paypal)
+    paypal.Buttons().render(this.paymentRef.nativeElement)
    }
 
    addUser(){
