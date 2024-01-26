@@ -4,6 +4,7 @@ import { BootstrapServiceService } from '../shared/bootstrap-service.service';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AngularBootstrapComponent } from '../angular-bootstrap.component';
 import { AngularBootstrapCommunationService } from '../shared/angular-bootstrap-communation.service';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,9 @@ export class HomeComponent {
   dropDownVariables : FormBuilder | any;
   imageTesting : FormBuilder | any;
   @Output() sendObjectToTestingComp = new EventEmitter<any>();
-
+  dataToGet: any;
+  arrayForTesting:any = ['one','two','three']
+  unsubscribeInterval!:Subscription; 
   constructor(private bootstrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder,
               private bootStrapService:BootstrapServiceService,
@@ -25,7 +28,12 @@ export class HomeComponent {
               }
 
   ngOnInit(): void {
-    this.GetDropdownVariables()
+   this.unsubscribeInterval = interval(1000).subscribe((count) => {
+      console.log(count); 
+    });
+    this.GetDropdownVariables();
+    this.getDataForTest()
+
   }
 
 
@@ -49,6 +57,16 @@ export class HomeComponent {
   })
   }
  
+  getDataForTest(){
+    this.dataToGet = this.AngularBootstrapCommunationService.dataToSend(this.arrayForTesting).subscribe(
+      (res:any)=>{
+      console.log(res)
+      },
+      (error:any)=>{
+       console.log(error)
+      }
+    )
+  }
   
 SubmitOrder(){
   const payLoad = this.dropDownVariables.value;
@@ -68,5 +86,9 @@ SubmitOrder(){
   }
   sendHelloWorldToOtherComponent(){
     this.dataToSend = "Hello World"
+  }
+
+  ngOnDestroy(){
+   this.unsubscribeInterval.unsubscribe();
   }
 }

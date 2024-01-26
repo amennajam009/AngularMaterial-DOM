@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AngularBootstrapCommunationService {
   private variabledata = '';
+  anyDataToPass = []
 
   setvariables (data: any) {
     return this.variabledata = data;
@@ -13,5 +14,9 @@ export class AngularBootstrapCommunationService {
 
   getvariables(){
     return this.variabledata;
+  }
+
+  dataToSend(data:any){
+    return this.anyDataToPass = data
   }
 }
