@@ -20,6 +20,7 @@ export class HomeComponent {
   dataToGet: any;
   arrayForTesting:any = ['one','two','three']
   unsubscribeInterval!:Subscription; 
+  newVar: any
   constructor(private bootstrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder,
               private bootStrapService:BootstrapServiceService,
@@ -28,12 +29,12 @@ export class HomeComponent {
               }
 
   ngOnInit(): void {
-   this.unsubscribeInterval = interval(1000).subscribe((count) => {
-      console.log(count); 
-    });
+  //  this.unsubscribeInterval = interval(1000).subscribe((count) => {
+  //     console.log(count); 
+  //   });
     this.GetDropdownVariables();
     this.getDataForTest()
-
+    this.mymethod()
   }
 
 
@@ -75,6 +76,16 @@ SubmitOrder(){
   })
 }
 
+mymethod(){
+ const myobject = {
+     name: 'amen',
+     age: 21,
+     education: 'matric'
+  }
+  const {name,age} = myobject
+  this.newVar = {name,age}
+  console.log(this.newVar)
+}
 
   GetDropdownVariables(){
     this.bootstrapService.GetDropDownVariables().subscribe((res:any)=>{

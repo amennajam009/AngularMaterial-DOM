@@ -10,6 +10,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 export class CrudListingComponent {
  UserDatalist:any = []
  DataById:any = []
+ newVar: any
  UserUpdateFrom: FormBuilder | any
   constructor(private bootStrapService:BootstrapServiceService,
               private FormBuilder:FormBuilder) { 
@@ -18,6 +19,7 @@ export class CrudListingComponent {
   
   ngOnInit(): void {
     this.getUserData()
+    this.mymethod()
   }
 
 
@@ -58,6 +60,21 @@ updateFormModal(){
     select2: new FormControl ('',[Validators.required,])  
   })
 }
+
+mymethod(){
+  const myobject = {
+      name: 'amen',
+      age: 21,
+      education: 'matric'
+   }
+   const {name,age} = myobject
+   this.newVar = {name,age}
+  //  console.log(this.newVar)
+  const myArray = ['singleElement' , 'amen' , 'blah'];
+const element = myArray.join();
+console.log( element);
+ }
+
 
 getUpdateFromModel(id:any){
   this.bootStrapService.getById(id).subscribe((res:any)=>{

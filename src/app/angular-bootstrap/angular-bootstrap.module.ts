@@ -16,6 +16,7 @@ import { DirectiveComponent } from './directive/directive.component';
 import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
 import { AttributiveDirectiveDirective } from './shared/directives/attributive-directive.directive';
 import { AttributeDirectiveComponent } from './types-of-directive/attribute-directive/attribute-directive.component';
+import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
 
 
 
@@ -36,6 +37,7 @@ import { AttributeDirectiveComponent } from './types-of-directive/attribute-dire
     StructuralDirectiveDirective,
     AttributiveDirectiveDirective,
     AttributeDirectiveComponent,
+    DynamicFormsComponent,
 
   ],
   imports: [
