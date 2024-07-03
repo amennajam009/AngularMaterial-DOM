@@ -10,6 +10,7 @@ import { DirectiveComponent } from './directive/directive.component';
 import { ComponentDirectiveComponent } from './types-of-directives/component-directive/component-directive.component';
 import { StructuralDirectiveComponent } from './types-of-directives/structural-directive/structural-directive.component';
 import { AttributeDirectiveComponent } from './types-of-directive/attribute-directive/attribute-directive.component';
+import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
 
 
 const routes: Routes = [{ path: '', component: AngularBootstrapComponent,
@@ -24,7 +25,9 @@ children:[
   {path:'component-directive',component:ComponentDirectiveComponent},
   {path:'structural-directive',component:StructuralDirectiveComponent},
   // {path:'attribute-directive',component:AttributeDirectiveComponent},
-  {path:'attribute-directive',component:AttributeDirectiveComponent}
+  {path:'attribute-directive',component:AttributeDirectiveComponent},
+  {path:'dynamic-forms',component:DynamicFormsComponent}
+
 
 
 
